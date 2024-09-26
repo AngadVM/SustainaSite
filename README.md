@@ -1,2 +1,2 @@
 # SustainaSite
-This project aims to quantify the best sites of development for Renewable Energy Development for Regions
+SustainaSite aims to identify the best sites of development for Renewable Energy Resources for Geographical Regions!
