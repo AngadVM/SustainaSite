@@ -1,5 +1,9 @@
 import streamlit as st
 from Modules.map import get_map
+from Modules.landuse import get_land_use_map
+from Modules.solar import get_radiation_map
+from Modules.wind import get_wind_map
+from Modules.final_map import create_combined_renewable_energy_map
 import streamlit.components.v1 as components
 
 def main():
@@ -26,10 +30,28 @@ def main():
 
         # Save map image after form submission
         get_map(location, scale)
+        get_land_use_map(location, scale)
+        get_radiation_map(location, scale)
+        get_wind_map(location, scale)
 
-        col1, col2, col3 = st.columns(3, gap="small")
-        render_html(f'{location}_map.html', caption=f"Map of Site Location - {location}")
+        col1, col2 = st.columns(2, gap="small")
+        with col1:
+            render_html(f'tmp/{location}_map.html', caption=f"Map of Site Location - {location}")
+        with col2:
+            render_html(f'tmp/{location}_land_use_map.html', caption=f"Land Use Map of Site Location - {location}")
+      
+        col3, col4 = st.columns(2, gap="small")
+        with col3:
+            render_html(f'tmp/{location}_radiation_map.html', caption=f"Radiation Map of Site Location - {location}")
+        with col4:
+            render_html(f'tmp/{location}_wind_map.html', caption=f"Wind Map of Site Location - {location}")
 
+        st.markdown("---")
+
+        st.markdown("## Identified Locations!")
+
+        create_combined_renewable_energy_map(location, scale)
+        render_html(f"tmp/{location}_combined_renewable_energy_map.html", caption='Potential Locations for {location}')
 
 def det_form():
 
@@ -61,7 +83,7 @@ def render_html(path: str, caption: str):
     with open(path,'r') as f: 
         html_data = f.read()
         
-    components.html(html_data, width=400, height=400)
+    components.html(html_data, width=800, height=800)
 
     st.caption(caption)
 

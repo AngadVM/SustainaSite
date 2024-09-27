@@ -6,6 +6,8 @@ name = "pypi"
 [packages]
 streamlit = "*"
 osmnx = "*"
+matplotlib = "*"
+scipy = "*"
 
 [dev-packages]
 

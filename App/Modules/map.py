@@ -22,6 +22,6 @@ def get_map(address: str, scale: int = 50):
                          fill_opacity=0.05).add_to(m)
 
         # Save the map to an HTML file
-        map_file = f'{address}_map.html'
+        map_file = f'tmp/{address}_map.html'
         m.save(map_file)
 

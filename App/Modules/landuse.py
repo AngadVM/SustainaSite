@@ -1,80 +1,83 @@
 import folium
-from folium.plugins import MarkerCluster
 import osmnx as ox
-import geopandas as gpd
-from shapely.geometry import box
-import matplotlib.colors as mcolors
-import tempfile
+from .coords import geocode
 
 def get_land_use_map(address: str, scale: int = 50):
-    # Use osmnx to geocode the address
-    location = ox.geocode(address)
+    coords = geocode(address, scale)
     
-    if location:
-        latitude, longitude = location[0], location[1]
-        radius_deg = scale / 111  # Convert length in km to degrees
-
-        # Define the bounding box
-        north, south = latitude + radius_deg, latitude - radius_deg
-        east, west = longitude + radius_deg / ox.projection.get_earth_radius_at_latitude(latitude), longitude - radius_deg / ox.projection.get_earth_radius_at_latitude(latitude)
-
-        # Create a GeoDataFrame with the bounding box
-        bbox = box(west, south, east, north)
-        gdf = gpd.GeoDataFrame({'geometry': [bbox]}, crs='EPSG:4326')
-
-        # Get land use data from OpenStreetMap
-        tags = {'landuse': True}
-        land_use = ox.geometries_from_bbox(north, south, east, west, tags)
-
-        # Create a color map for different land use types
-        land_use_types = land_use['landuse'].unique()
-        color_map = {lu: mcolors.rgb2hex(mcolors.hsv_to_rgb((i/len(land_use_types), 0.8, 0.8))) 
-                     for i, lu in enumerate(land_use_types)}
+    if isinstance(coords, list):
+        min_lat, max_lat, min_lon, max_lon = coords
+        center_lat = (min_lat + max_lat) / 2
+        center_lon = (min_lon + max_lon) / 2
 
         # Create a map centered on the location
-        m = folium.Map(location=[latitude, longitude], zoom_start=12)
+        m = folium.Map(location=[center_lat, center_lon], zoom_start=12)
+
+        # Fetch land use data from OpenStreetMap
+        north, south, east, west = max_lat, min_lat, max_lon, min_lon
+        gdf = ox.geometries_from_bbox(north, south, east, west, tags={'landuse': True})
+
+        # Define color scheme for different land use types
+        color_map = {
+            'residential': 'red',
+            'commercial': 'blue',
+            'industrial': 'purple',
+            'agricultural': 'green',
+            'forest': 'darkgreen',
+            'grass': 'lightgreen',
+            'water': 'lightblue'
+        }
 
         # Add land use polygons to the map
-        for _, row in land_use.iterrows():
-            if row['geometry'].geom_type == 'Polygon':
-                folium.Polygon(
-                    locations=[(y, x) for x, y in row['geometry'].exterior.coords],
-                    color=color_map.get(row['landuse'], 'gray'),
-                    fill=True,
-                    fillColor=color_map.get(row['landuse'], 'gray'),
-                    fillOpacity=0.7,
-                    popup=f"Land use: {row['landuse']}"
+        for idx, row in gdf.iterrows():
+            if 'landuse' in row:
+                landuse = row['landuse']
+                color = color_map.get(landuse, 'gray')  # Default to gray for unknown land use types
+                folium.GeoJson(
+                    row['geometry'],
+                    style_function=lambda x, color=color: {
+                        'fillColor': color,
+                        'color': 'black',
+                        'weight': 1,
+                        'fillOpacity': 0.7
+                    },
+                    tooltip=landuse
                 ).add_to(m)
 
-        # Add a marker for the center point
-        folium.Marker([latitude, longitude], popup=address).add_to(m)
 
-        # Add the bounding box
-        folium.GeoJson(gdf).add_to(m)
+        # Add a rectangle to show the bounding box
+        folium.Rectangle(bounds=[[min_lat, min_lon], [max_lat, max_lon]], 
+                         fill=False, 
+                         color='black',
+                         weight=2).add_to(m)
 
-        # Create a legend
+        # Add a legend
         legend_html = '''
-        <div style="position: fixed; bottom: 50px; left: 50px; width: 220px; height: 130px; 
+        <div style="position: fixed; bottom: 50px; left: 50px; width: 120px; height: 180px; 
         border:2px solid grey; z-index:9999; font-size:14px; background-color:white;
-        ">&nbsp; Land Use Types <br>
+        ">&nbsp; Land Use Types<br>
+        &nbsp; <i class="fa fa-square fa-1x" style="color:red"></i> Residential<br>
+        &nbsp; <i class="fa fa-square fa-1x" style="color:blue"></i> Commercial<br>
+        &nbsp; <i class="fa fa-square fa-1x" style="color:purple"></i> Industrial<br>
+        &nbsp; <i class="fa fa-square fa-1x" style="color:green"></i> Agricultural<br>
+        &nbsp; <i class="fa fa-square fa-1x" style="color:darkgreen"></i> Forest<br>
+        &nbsp; <i class="fa fa-square fa-1x" style="color:lightgreen"></i> Grass<br>
+        &nbsp; <i class="fa fa-square fa-1x" style="color:lightblue"></i> Water<br>
+        &nbsp; <i class="fa fa-square fa-1x" style="color:gray"></i> Other
+        </div>
         '''
-        for lu, color in color_map.items():
-            legend_html += f'<i class="fa fa-square fa-1x" style="color:{color}"></i> {lu}<br>'
-        legend_html += '</div>'
         m.get_root().html.add_child(folium.Element(legend_html))
 
-        # Save the map to a temporary HTML file
-        _, temp_html = tempfile.mkstemp(suffix=".html")
-        m.save(temp_html)        
+        # Save the map to an HTML file
+        map_file = f'tmp/{address}_land_use_map.html'
+        m.save(map_file)
 
+        return map_file, gdf
     else:
-        return "Address not found"
-
+        return coords  # This will be "Address not documented" if geocoding failed
+    
 if __name__ == "__main__":
-    address = input("Enter an address: ")
-    scale = int(input("Enter the scale in km: "))
-    result = get_land_use_map(address, scale)
-    if isinstance(result, Image.Image):
-        result.show()  # This will display the image
-    else:
-        print(result)  # This will print the error message
+
+    address = "New York, NY"
+    map_file = get_land_use_map(address, scale=10)
+    print(f"Land use map saved as: {map_file}")
