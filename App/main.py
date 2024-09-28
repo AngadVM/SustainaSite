@@ -79,13 +79,14 @@ def det_form():
     return None
 
 def render_html(path: str, caption: str):
+    try:
+        with open(path, 'r', encoding='utf-8') as f:  # Ensure UTF-8 encoding is used
+            html_data = f.read()
+        components.html(html_data, width=800, height=800)
+        st.caption(caption)
+    except UnicodeDecodeError as e:
+        st.error(f"Error reading the HTML file: {e}")
 
-    with open(path,'r') as f: 
-        html_data = f.read()
-        
-    components.html(html_data, width=800, height=800)
-
-    st.caption(caption)
 
 if __name__ == "__main__":
     main()

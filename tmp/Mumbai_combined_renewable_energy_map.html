@@ -1,0 +1,3715 @@
+<!DOCTYPE html>
+<html>
+<head>
+    
+    <meta http-equiv="content-type" content="text/html; charset=UTF-8" />
+    
+        <script>
+            L_NO_TOUCH = false;
+            L_DISABLE_3D = false;
+        </script>
+    
+    <style>html, body {width: 100%;height: 100%;margin: 0;padding: 0;}</style>
+    <style>#map {position:absolute;top:0;bottom:0;right:0;left:0;}</style>
+    <script src="https://cdn.jsdelivr.net/npm/leaflet@1.9.3/dist/leaflet.js"></script>
+    <script src="https://code.jquery.com/jquery-3.7.1.min.js"></script>
+    <script src="https://cdn.jsdelivr.net/npm/bootstrap@5.2.2/dist/js/bootstrap.bundle.min.js"></script>
+    <script src="https://cdnjs.cloudflare.com/ajax/libs/Leaflet.awesome-markers/2.0.2/leaflet.awesome-markers.js"></script>
+    <link rel="stylesheet" href="https://cdn.jsdelivr.net/npm/leaflet@1.9.3/dist/leaflet.css"/>
+    <link rel="stylesheet" href="https://cdn.jsdelivr.net/npm/bootstrap@5.2.2/dist/css/bootstrap.min.css"/>
+    <link rel="stylesheet" href="https://netdna.bootstrapcdn.com/bootstrap/3.0.0/css/bootstrap-glyphicons.css"/>
+    <link rel="stylesheet" href="https://cdn.jsdelivr.net/npm/@fortawesome/fontawesome-free@6.2.0/css/all.min.css"/>
+    <link rel="stylesheet" href="https://cdnjs.cloudflare.com/ajax/libs/Leaflet.awesome-markers/2.0.2/leaflet.awesome-markers.css"/>
+    <link rel="stylesheet" href="https://cdn.jsdelivr.net/gh/python-visualization/folium/folium/templates/leaflet.awesome.rotate.min.css"/>
+    
+            <meta name="viewport" content="width=device-width,
+                initial-scale=1.0, maximum-scale=1.0, user-scalable=no" />
+            <style>
+                #map_923e02a2996bae00ad614feeefdcf787 {
+                    position: relative;
+                    width: 100.0%;
+                    height: 100.0%;
+                    left: 0.0%;
+                    top: 0.0%;
+                }
+                .leaflet-container { font-size: 1rem; }
+            </style>
+        
+</head>
+<body>
+    
+    
+        <div style="position: fixed; bottom: 50px; left: 50px; width: 250px; 
+        border:2px solid grey; z-index:9999; font-size:14px; background-color:white;">
+            <p style="margin: 5px;"><span style="font-size: 24px;">🎐</span> Potential Wind Farm Location</p>
+            <p style="margin: 5px;"><span style="font-size: 24px;">☀️</span> Potential Solar Farm Location</p>
+        </div>
+        
+    
+            <div class="folium-map" id="map_923e02a2996bae00ad614feeefdcf787" ></div>
+        
+</body>
+<script>
+    
+    
+            var map_923e02a2996bae00ad614feeefdcf787 = L.map(
+                "map_923e02a2996bae00ad614feeefdcf787",
+                {
+                    center: [19.08157715, 72.88662753964906],
+                    crs: L.CRS.EPSG3857,
+                    zoom: 10,
+                    zoomControl: true,
+                    preferCanvas: false,
+                }
+            );
+
+            
+
+        
+    
+            var tile_layer_4810ebefb7e81d80e5a86ea83a7b5c22 = L.tileLayer(
+                "https://tile.openstreetmap.org/{z}/{x}/{y}.png",
+                {"attribution": "\u0026copy; \u003ca href=\"https://www.openstreetmap.org/copyright\"\u003eOpenStreetMap\u003c/a\u003e contributors", "detectRetina": false, "maxNativeZoom": 19, "maxZoom": 19, "minZoom": 0, "noWrap": false, "opacity": 1, "subdomains": "abc", "tms": false}
+            );
+        
+    
+            tile_layer_4810ebefb7e81d80e5a86ea83a7b5c22.addTo(map_923e02a2996bae00ad614feeefdcf787);
+        
+    
+            var marker_ca38e29dca6989fec9a2d06324d068cc = L.marker(
+                [19.294948416002846, 73.11240431925548],
+                {}
+            ).addTo(map_923e02a2996bae00ad614feeefdcf787);
+        
+    
+            var div_icon_7cc743897cf8f523518371d55e310013 = L.divIcon({"className": "wind-icon", "html": "\u003cdiv style=\"font-size: 24px;\"\u003e\ud83c\udf90\u003c/div\u003e"});
+            marker_ca38e29dca6989fec9a2d06324d068cc.setIcon(div_icon_7cc743897cf8f523518371d55e310013);
+        
+    
+            marker_ca38e29dca6989fec9a2d06324d068cc.bindTooltip(
+                `<div>
+                     Potential Wind Farm Location
+                 </div>`,
+                {"sticky": true}
+            );
+        
+    
+            var marker_9ed049d9aabb653b7ec8b50791353120 = L.marker(
+                [19.48461176356093, 73.31309479001673],
+                {}
+            ).addTo(map_923e02a2996bae00ad614feeefdcf787);
+        
+    
+            var div_icon_296340e12f6b06875457c68e275a66be = L.divIcon({"className": "wind-icon", "html": "\u003cdiv style=\"font-size: 24px;\"\u003e\ud83c\udf90\u003c/div\u003e"});
+            marker_9ed049d9aabb653b7ec8b50791353120.setIcon(div_icon_296340e12f6b06875457c68e275a66be);
+        
+    
+            marker_9ed049d9aabb653b7ec8b50791353120.bindTooltip(
+                `<div>
+                     Potential Wind Farm Location
+                 </div>`,
+                {"sticky": true}
+            );
+        
+    
+            var marker_68e549b81a63d87a64b1a7105ce91384 = L.marker(
+                [18.685169290645995, 72.92253156494638],
+                {}
+            ).addTo(map_923e02a2996bae00ad614feeefdcf787);
+        
+    
+            var div_icon_82e094b873eb23973b893335f23e25d1 = L.divIcon({"className": "solar-icon", "html": "\u003cdiv style=\"font-size: 24px;\"\u003e\u2600\ufe0f\u003c/div\u003e"});
+            marker_68e549b81a63d87a64b1a7105ce91384.setIcon(div_icon_82e094b873eb23973b893335f23e25d1);
+        
+    
+            marker_68e549b81a63d87a64b1a7105ce91384.bindTooltip(
+                `<div>
+                     Potential Solar Farm Location
+                 </div>`,
+                {"sticky": true}
+            );
+        
+    
+            var marker_905aab0e000c49665942e281fe52ecdc = L.marker(
+                [19.43271054566638, 72.4488784777707],
+                {}
+            ).addTo(map_923e02a2996bae00ad614feeefdcf787);
+        
+    
+            var div_icon_4ab00830a6a70475db5140352e1e9759 = L.divIcon({"className": "solar-icon", "html": "\u003cdiv style=\"font-size: 24px;\"\u003e\u2600\ufe0f\u003c/div\u003e"});
+            marker_905aab0e000c49665942e281fe52ecdc.setIcon(div_icon_4ab00830a6a70475db5140352e1e9759);
+        
+    
+            marker_905aab0e000c49665942e281fe52ecdc.bindTooltip(
+                `<div>
+                     Potential Solar Farm Location
+                 </div>`,
+                {"sticky": true}
+            );
+        
+    
+            var marker_c4b18ae38144abd5a85a4070d4033219 = L.marker(
+                [19.410167012700654, 72.77446279409344],
+                {}
+            ).addTo(map_923e02a2996bae00ad614feeefdcf787);
+        
+    
+            var div_icon_29c193898ea880a3f8b77b139c428e21 = L.divIcon({"className": "solar-icon", "html": "\u003cdiv style=\"font-size: 24px;\"\u003e\u2600\ufe0f\u003c/div\u003e"});
+            marker_c4b18ae38144abd5a85a4070d4033219.setIcon(div_icon_29c193898ea880a3f8b77b139c428e21);
+        
+    
+            marker_c4b18ae38144abd5a85a4070d4033219.bindTooltip(
+                `<div>
+                     Potential Solar Farm Location
+                 </div>`,
+                {"sticky": true}
+            );
+        
+    
+            var marker_3d6baaeea10508cd316ee30ee9f31c7d = L.marker(
+                [19.26458693463441, 72.89503682970714],
+                {}
+            ).addTo(map_923e02a2996bae00ad614feeefdcf787);
+        
+    
+            var div_icon_c0e6e4c90c3f10c91289a5a3e49978a3 = L.divIcon({"className": "solar-icon", "html": "\u003cdiv style=\"font-size: 24px;\"\u003e\u2600\ufe0f\u003c/div\u003e"});
+            marker_3d6baaeea10508cd316ee30ee9f31c7d.setIcon(div_icon_c0e6e4c90c3f10c91289a5a3e49978a3);
+        
+    
+            marker_3d6baaeea10508cd316ee30ee9f31c7d.bindTooltip(
+                `<div>
+                     Potential Solar Farm Location
+                 </div>`,
+                {"sticky": true}
+            );
+        
+    
+            var marker_aaf86a5b37bd01faa1f41139d8d84b39 = L.marker(
+                [19.530605356023738, 73.32917256725314],
+                {}
+            ).addTo(map_923e02a2996bae00ad614feeefdcf787);
+        
+    
+            var div_icon_95c60d538deff2de7c2c7046e62db8fe = L.divIcon({"className": "solar-icon", "html": "\u003cdiv style=\"font-size: 24px;\"\u003e\u2600\ufe0f\u003c/div\u003e"});
+            marker_aaf86a5b37bd01faa1f41139d8d84b39.setIcon(div_icon_95c60d538deff2de7c2c7046e62db8fe);
+        
+    
+            marker_aaf86a5b37bd01faa1f41139d8d84b39.bindTooltip(
+                `<div>
+                     Potential Solar Farm Location
+                 </div>`,
+                {"sticky": true}
+            );
+        
+    
+            var marker_84f02d1c6408c9821cbaa9f01e031499 = L.marker(
+                [19.065835826412588, 73.25191865217987],
+                {}
+            ).addTo(map_923e02a2996bae00ad614feeefdcf787);
+        
+    
+            var div_icon_422dd0b707739bb0b88beff6c55bab31 = L.divIcon({"className": "solar-icon", "html": "\u003cdiv style=\"font-size: 24px;\"\u003e\u2600\ufe0f\u003c/div\u003e"});
+            marker_84f02d1c6408c9821cbaa9f01e031499.setIcon(div_icon_422dd0b707739bb0b88beff6c55bab31);
+        
+    
+            marker_84f02d1c6408c9821cbaa9f01e031499.bindTooltip(
+                `<div>
+                     Potential Solar Farm Location
+                 </div>`,
+                {"sticky": true}
+            );
+        
+    
+            var marker_6ff58ef2b93014896063d2e3d80c16dc = L.marker(
+                [19.51129353483778, 73.24222362845036],
+                {}
+            ).addTo(map_923e02a2996bae00ad614feeefdcf787);
+        
+    
+            var div_icon_fc9a81da4873eec930aeadf143f8371c = L.divIcon({"className": "solar-icon", "html": "\u003cdiv style=\"font-size: 24px;\"\u003e\u2600\ufe0f\u003c/div\u003e"});
+            marker_6ff58ef2b93014896063d2e3d80c16dc.setIcon(div_icon_fc9a81da4873eec930aeadf143f8371c);
+        
+    
+            marker_6ff58ef2b93014896063d2e3d80c16dc.bindTooltip(
+                `<div>
+                     Potential Solar Farm Location
+                 </div>`,
+                {"sticky": true}
+            );
+        
+    
+            var marker_dad91cc1fbecb6912aa1f21e2af133f5 = L.marker(
+                [19.190746770216663, 72.44155887417469],
+                {}
+            ).addTo(map_923e02a2996bae00ad614feeefdcf787);
+        
+    
+            var div_icon_ba4428e342a8949dd13a8b5736a6dc19 = L.divIcon({"className": "solar-icon", "html": "\u003cdiv style=\"font-size: 24px;\"\u003e\u2600\ufe0f\u003c/div\u003e"});
+            marker_dad91cc1fbecb6912aa1f21e2af133f5.setIcon(div_icon_ba4428e342a8949dd13a8b5736a6dc19);
+        
+    
+            marker_dad91cc1fbecb6912aa1f21e2af133f5.bindTooltip(
+                `<div>
+                     Potential Solar Farm Location
+                 </div>`,
+                {"sticky": true}
+            );
+        
+    
+            var marker_4b973a9d161d8c23e7a2a153ecf89889 = L.marker(
+                [19.355727762840353, 72.60105355382582],
+                {}
+            ).addTo(map_923e02a2996bae00ad614feeefdcf787);
+        
+    
+            var div_icon_20aa7fc8e97c057e0daa7c500effd21f = L.divIcon({"className": "solar-icon", "html": "\u003cdiv style=\"font-size: 24px;\"\u003e\u2600\ufe0f\u003c/div\u003e"});
+            marker_4b973a9d161d8c23e7a2a153ecf89889.setIcon(div_icon_20aa7fc8e97c057e0daa7c500effd21f);
+        
+    
+            marker_4b973a9d161d8c23e7a2a153ecf89889.bindTooltip(
+                `<div>
+                     Potential Solar Farm Location
+                 </div>`,
+                {"sticky": true}
+            );
+        
+    
+            var marker_ce3177f31b52894547ed98d0a222d134 = L.marker(
+                [18.825624655508236, 72.68781424230181],
+                {}
+            ).addTo(map_923e02a2996bae00ad614feeefdcf787);
+        
+    
+            var div_icon_05cb4d633b1032fcabf63d9b061a1e39 = L.divIcon({"className": "solar-icon", "html": "\u003cdiv style=\"font-size: 24px;\"\u003e\u2600\ufe0f\u003c/div\u003e"});
+            marker_ce3177f31b52894547ed98d0a222d134.setIcon(div_icon_05cb4d633b1032fcabf63d9b061a1e39);
+        
+    
+            marker_ce3177f31b52894547ed98d0a222d134.bindTooltip(
+                `<div>
+                     Potential Solar Farm Location
+                 </div>`,
+                {"sticky": true}
+            );
+        
+    
+            var marker_388a57e1f585cbe72b0b09b5cb73cf01 = L.marker(
+                [19.18924757630025, 73.30937233920434],
+                {}
+            ).addTo(map_923e02a2996bae00ad614feeefdcf787);
+        
+    
+            var div_icon_ea0542b9b2c8d4e1057eba8639c11e24 = L.divIcon({"className": "solar-icon", "html": "\u003cdiv style=\"font-size: 24px;\"\u003e\u2600\ufe0f\u003c/div\u003e"});
+            marker_388a57e1f585cbe72b0b09b5cb73cf01.setIcon(div_icon_ea0542b9b2c8d4e1057eba8639c11e24);
+        
+    
+            marker_388a57e1f585cbe72b0b09b5cb73cf01.bindTooltip(
+                `<div>
+                     Potential Solar Farm Location
+                 </div>`,
+                {"sticky": true}
+            );
+        
+    
+            var marker_6c399df1d6440f3e80ab6809c7a813d1 = L.marker(
+                [18.865125794497622, 72.63650084259852],
+                {}
+            ).addTo(map_923e02a2996bae00ad614feeefdcf787);
+        
+    
+            var div_icon_8cfdf7c9b2a16182bb7260ed8d48fd4a = L.divIcon({"className": "solar-icon", "html": "\u003cdiv style=\"font-size: 24px;\"\u003e\u2600\ufe0f\u003c/div\u003e"});
+            marker_6c399df1d6440f3e80ab6809c7a813d1.setIcon(div_icon_8cfdf7c9b2a16182bb7260ed8d48fd4a);
+        
+    
+            marker_6c399df1d6440f3e80ab6809c7a813d1.bindTooltip(
+                `<div>
+                     Potential Solar Farm Location
+                 </div>`,
+                {"sticky": true}
+            );
+        
+    
+            var marker_70e304f36c003357c60408df68b0e183 = L.marker(
+                [19.439640287158564, 73.34417739752827],
+                {}
+            ).addTo(map_923e02a2996bae00ad614feeefdcf787);
+        
+    
+            var div_icon_996bcbc676e4aadd9f9c4e3420ce3207 = L.divIcon({"className": "solar-icon", "html": "\u003cdiv style=\"font-size: 24px;\"\u003e\u2600\ufe0f\u003c/div\u003e"});
+            marker_70e304f36c003357c60408df68b0e183.setIcon(div_icon_996bcbc676e4aadd9f9c4e3420ce3207);
+        
+    
+            marker_70e304f36c003357c60408df68b0e183.bindTooltip(
+                `<div>
+                     Potential Solar Farm Location
+                 </div>`,
+                {"sticky": true}
+            );
+        
+    
+            var marker_8ec3ab42576d191e75a342d3305b4c85 = L.marker(
+                [18.769466270136135, 72.86569208249854],
+                {}
+            ).addTo(map_923e02a2996bae00ad614feeefdcf787);
+        
+    
+            var div_icon_c013a2e0619fb505657566a6848e2c8b = L.divIcon({"className": "solar-icon", "html": "\u003cdiv style=\"font-size: 24px;\"\u003e\u2600\ufe0f\u003c/div\u003e"});
+            marker_8ec3ab42576d191e75a342d3305b4c85.setIcon(div_icon_c013a2e0619fb505657566a6848e2c8b);
+        
+    
+            marker_8ec3ab42576d191e75a342d3305b4c85.bindTooltip(
+                `<div>
+                     Potential Solar Farm Location
+                 </div>`,
+                {"sticky": true}
+            );
+        
+    
+            var marker_6c3696417ed3122dfd8e53eacf908739 = L.marker(
+                [18.75160605590186, 73.19956655059786],
+                {}
+            ).addTo(map_923e02a2996bae00ad614feeefdcf787);
+        
+    
+            var div_icon_b6911bbc240a578b2e00cd4813715ec3 = L.divIcon({"className": "solar-icon", "html": "\u003cdiv style=\"font-size: 24px;\"\u003e\u2600\ufe0f\u003c/div\u003e"});
+            marker_6c3696417ed3122dfd8e53eacf908739.setIcon(div_icon_b6911bbc240a578b2e00cd4813715ec3);
+        
+    
+            marker_6c3696417ed3122dfd8e53eacf908739.bindTooltip(
+                `<div>
+                     Potential Solar Farm Location
+                 </div>`,
+                {"sticky": true}
+            );
+        
+    
+            var marker_1feff12c28c6fba8c896bf3225ef1d52 = L.marker(
+                [19.225865028406762, 73.07700420294898],
+                {}
+            ).addTo(map_923e02a2996bae00ad614feeefdcf787);
+        
+    
+            var div_icon_790aaac74a4f39c4f278a5646a4af3d2 = L.divIcon({"className": "solar-icon", "html": "\u003cdiv style=\"font-size: 24px;\"\u003e\u2600\ufe0f\u003c/div\u003e"});
+            marker_1feff12c28c6fba8c896bf3225ef1d52.setIcon(div_icon_790aaac74a4f39c4f278a5646a4af3d2);
+        
+    
+            marker_1feff12c28c6fba8c896bf3225ef1d52.bindTooltip(
+                `<div>
+                     Potential Solar Farm Location
+                 </div>`,
+                {"sticky": true}
+            );
+        
+    
+            var marker_1b6a84c3e157b12833ee6398604dd38f = L.marker(
+                [19.147141037943037, 72.81470395293678],
+                {}
+            ).addTo(map_923e02a2996bae00ad614feeefdcf787);
+        
+    
+            var div_icon_b4b01bef90b19dc36b5930427452c920 = L.divIcon({"className": "solar-icon", "html": "\u003cdiv style=\"font-size: 24px;\"\u003e\u2600\ufe0f\u003c/div\u003e"});
+            marker_1b6a84c3e157b12833ee6398604dd38f.setIcon(div_icon_b4b01bef90b19dc36b5930427452c920);
+        
+    
+            marker_1b6a84c3e157b12833ee6398604dd38f.bindTooltip(
+                `<div>
+                     Potential Solar Farm Location
+                 </div>`,
+                {"sticky": true}
+            );
+        
+    
+            var marker_aa13f1c69b0b889ccf9ae5820c7e5078 = L.marker(
+                [19.239459605498293, 72.67806011944286],
+                {}
+            ).addTo(map_923e02a2996bae00ad614feeefdcf787);
+        
+    
+            var div_icon_b8681fa1eaba74d983feb6795708d564 = L.divIcon({"className": "solar-icon", "html": "\u003cdiv style=\"font-size: 24px;\"\u003e\u2600\ufe0f\u003c/div\u003e"});
+            marker_aa13f1c69b0b889ccf9ae5820c7e5078.setIcon(div_icon_b8681fa1eaba74d983feb6795708d564);
+        
+    
+            marker_aa13f1c69b0b889ccf9ae5820c7e5078.bindTooltip(
+                `<div>
+                     Potential Solar Farm Location
+                 </div>`,
+                {"sticky": true}
+            );
+        
+    
+            var marker_eaa2547c6185ec486ba2438eb38a3ef0 = L.marker(
+                [18.714926508832143, 72.44834259806852],
+                {}
+            ).addTo(map_923e02a2996bae00ad614feeefdcf787);
+        
+    
+            var div_icon_30ef9e5837e38c8edef76185875b837d = L.divIcon({"className": "solar-icon", "html": "\u003cdiv style=\"font-size: 24px;\"\u003e\u2600\ufe0f\u003c/div\u003e"});
+            marker_eaa2547c6185ec486ba2438eb38a3ef0.setIcon(div_icon_30ef9e5837e38c8edef76185875b837d);
+        
+    
+            marker_eaa2547c6185ec486ba2438eb38a3ef0.bindTooltip(
+                `<div>
+                     Potential Solar Farm Location
+                 </div>`,
+                {"sticky": true}
+            );
+        
+    
+            var marker_0b9e12ce8028f28ca3e06b24328669e4 = L.marker(
+                [18.84334389144004, 73.20914109102245],
+                {}
+            ).addTo(map_923e02a2996bae00ad614feeefdcf787);
+        
+    
+            var div_icon_14d919d06b2f36d2489ef2d962fc03b6 = L.divIcon({"className": "solar-icon", "html": "\u003cdiv style=\"font-size: 24px;\"\u003e\u2600\ufe0f\u003c/div\u003e"});
+            marker_0b9e12ce8028f28ca3e06b24328669e4.setIcon(div_icon_14d919d06b2f36d2489ef2d962fc03b6);
+        
+    
+            marker_0b9e12ce8028f28ca3e06b24328669e4.bindTooltip(
+                `<div>
+                     Potential Solar Farm Location
+                 </div>`,
+                {"sticky": true}
+            );
+        
+    
+            var marker_caf692f5f688ed1e4b26655703c7dece = L.marker(
+                [18.64787182375272, 72.88648746139978],
+                {}
+            ).addTo(map_923e02a2996bae00ad614feeefdcf787);
+        
+    
+            var div_icon_43f37beed6e3ef9a20a5ffa50c872681 = L.divIcon({"className": "solar-icon", "html": "\u003cdiv style=\"font-size: 24px;\"\u003e\u2600\ufe0f\u003c/div\u003e"});
+            marker_caf692f5f688ed1e4b26655703c7dece.setIcon(div_icon_43f37beed6e3ef9a20a5ffa50c872681);
+        
+    
+            marker_caf692f5f688ed1e4b26655703c7dece.bindTooltip(
+                `<div>
+                     Potential Solar Farm Location
+                 </div>`,
+                {"sticky": true}
+            );
+        
+    
+            var marker_443eb47b088f08b120290b82bf7ef714 = L.marker(
+                [19.424955446984733, 72.72718237476083],
+                {}
+            ).addTo(map_923e02a2996bae00ad614feeefdcf787);
+        
+    
+            var div_icon_fdba2745db9256944be082db5a866b03 = L.divIcon({"className": "solar-icon", "html": "\u003cdiv style=\"font-size: 24px;\"\u003e\u2600\ufe0f\u003c/div\u003e"});
+            marker_443eb47b088f08b120290b82bf7ef714.setIcon(div_icon_fdba2745db9256944be082db5a866b03);
+        
+    
+            marker_443eb47b088f08b120290b82bf7ef714.bindTooltip(
+                `<div>
+                     Potential Solar Farm Location
+                 </div>`,
+                {"sticky": true}
+            );
+        
+    
+            var marker_8cd575d8a6def531bba17662f649d0d1 = L.marker(
+                [18.751209083372093, 72.53598692168977],
+                {}
+            ).addTo(map_923e02a2996bae00ad614feeefdcf787);
+        
+    
+            var div_icon_dc5d4c5293137591b250dde55ca5b3fc = L.divIcon({"className": "solar-icon", "html": "\u003cdiv style=\"font-size: 24px;\"\u003e\u2600\ufe0f\u003c/div\u003e"});
+            marker_8cd575d8a6def531bba17662f649d0d1.setIcon(div_icon_dc5d4c5293137591b250dde55ca5b3fc);
+        
+    
+            marker_8cd575d8a6def531bba17662f649d0d1.bindTooltip(
+                `<div>
+                     Potential Solar Farm Location
+                 </div>`,
+                {"sticky": true}
+            );
+        
+    
+            var marker_37642c39b20fae769b05c754a0b3d35f = L.marker(
+                [19.343404175566025, 72.89447366936683],
+                {}
+            ).addTo(map_923e02a2996bae00ad614feeefdcf787);
+        
+    
+            var div_icon_f99b014446d104d2d8d06380a91e61e5 = L.divIcon({"className": "solar-icon", "html": "\u003cdiv style=\"font-size: 24px;\"\u003e\u2600\ufe0f\u003c/div\u003e"});
+            marker_37642c39b20fae769b05c754a0b3d35f.setIcon(div_icon_f99b014446d104d2d8d06380a91e61e5);
+        
+    
+            marker_37642c39b20fae769b05c754a0b3d35f.bindTooltip(
+                `<div>
+                     Potential Solar Farm Location
+                 </div>`,
+                {"sticky": true}
+            );
+        
+    
+            var marker_d3c847005a4d45b1d5b81e2c165a9d01 = L.marker(
+                [19.013650975419267, 72.55897705095005],
+                {}
+            ).addTo(map_923e02a2996bae00ad614feeefdcf787);
+        
+    
+            var div_icon_79bb2c3367fb118fc6f105947c819368 = L.divIcon({"className": "solar-icon", "html": "\u003cdiv style=\"font-size: 24px;\"\u003e\u2600\ufe0f\u003c/div\u003e"});
+            marker_d3c847005a4d45b1d5b81e2c165a9d01.setIcon(div_icon_79bb2c3367fb118fc6f105947c819368);
+        
+    
+            marker_d3c847005a4d45b1d5b81e2c165a9d01.bindTooltip(
+                `<div>
+                     Potential Solar Farm Location
+                 </div>`,
+                {"sticky": true}
+            );
+        
+    
+            var marker_378da725a8fa41131744c1b70a63242b = L.marker(
+                [18.950679802080938, 73.2650429672395],
+                {}
+            ).addTo(map_923e02a2996bae00ad614feeefdcf787);
+        
+    
+            var div_icon_7ddf3b9f4fcc9daddbda1baba9367cb7 = L.divIcon({"className": "solar-icon", "html": "\u003cdiv style=\"font-size: 24px;\"\u003e\u2600\ufe0f\u003c/div\u003e"});
+            marker_378da725a8fa41131744c1b70a63242b.setIcon(div_icon_7ddf3b9f4fcc9daddbda1baba9367cb7);
+        
+    
+            marker_378da725a8fa41131744c1b70a63242b.bindTooltip(
+                `<div>
+                     Potential Solar Farm Location
+                 </div>`,
+                {"sticky": true}
+            );
+        
+    
+            var marker_63564773333516b7821437a4d96ad8f0 = L.marker(
+                [19.403456958183646, 72.79709071972655],
+                {}
+            ).addTo(map_923e02a2996bae00ad614feeefdcf787);
+        
+    
+            var div_icon_2c02843878f579a868484ccd2d63676d = L.divIcon({"className": "solar-icon", "html": "\u003cdiv style=\"font-size: 24px;\"\u003e\u2600\ufe0f\u003c/div\u003e"});
+            marker_63564773333516b7821437a4d96ad8f0.setIcon(div_icon_2c02843878f579a868484ccd2d63676d);
+        
+    
+            marker_63564773333516b7821437a4d96ad8f0.bindTooltip(
+                `<div>
+                     Potential Solar Farm Location
+                 </div>`,
+                {"sticky": true}
+            );
+        
+    
+            var marker_a3d881f1de792660b02a89010f19cb46 = L.marker(
+                [19.284408157840524, 72.61985436624245],
+                {}
+            ).addTo(map_923e02a2996bae00ad614feeefdcf787);
+        
+    
+            var div_icon_1015d03e452eb55cb305e8c3747dd9a0 = L.divIcon({"className": "solar-icon", "html": "\u003cdiv style=\"font-size: 24px;\"\u003e\u2600\ufe0f\u003c/div\u003e"});
+            marker_a3d881f1de792660b02a89010f19cb46.setIcon(div_icon_1015d03e452eb55cb305e8c3747dd9a0);
+        
+    
+            marker_a3d881f1de792660b02a89010f19cb46.bindTooltip(
+                `<div>
+                     Potential Solar Farm Location
+                 </div>`,
+                {"sticky": true}
+            );
+        
+    
+            var marker_526ec96382131c5b5020fbf15e82ae56 = L.marker(
+                [18.63691763229973, 72.56397626712919],
+                {}
+            ).addTo(map_923e02a2996bae00ad614feeefdcf787);
+        
+    
+            var div_icon_a90b3c11d18c5924658f0ed353884ab8 = L.divIcon({"className": "solar-icon", "html": "\u003cdiv style=\"font-size: 24px;\"\u003e\u2600\ufe0f\u003c/div\u003e"});
+            marker_526ec96382131c5b5020fbf15e82ae56.setIcon(div_icon_a90b3c11d18c5924658f0ed353884ab8);
+        
+    
+            marker_526ec96382131c5b5020fbf15e82ae56.bindTooltip(
+                `<div>
+                     Potential Solar Farm Location
+                 </div>`,
+                {"sticky": true}
+            );
+        
+    
+            var marker_a2056ccb0db53bf671f7006a10535a48 = L.marker(
+                [19.46715021904098, 72.4646037900325],
+                {}
+            ).addTo(map_923e02a2996bae00ad614feeefdcf787);
+        
+    
+            var div_icon_7739d3c9ce42b9c1de4509d7e6c2c696 = L.divIcon({"className": "solar-icon", "html": "\u003cdiv style=\"font-size: 24px;\"\u003e\u2600\ufe0f\u003c/div\u003e"});
+            marker_a2056ccb0db53bf671f7006a10535a48.setIcon(div_icon_7739d3c9ce42b9c1de4509d7e6c2c696);
+        
+    
+            marker_a2056ccb0db53bf671f7006a10535a48.bindTooltip(
+                `<div>
+                     Potential Solar Farm Location
+                 </div>`,
+                {"sticky": true}
+            );
+        
+    
+            var marker_8cff480cd6da9afedf42869115600146 = L.marker(
+                [19.509417676549333, 73.1916198458711],
+                {}
+            ).addTo(map_923e02a2996bae00ad614feeefdcf787);
+        
+    
+            var div_icon_6604ab34eaa8fd3db6415116f0b87ae0 = L.divIcon({"className": "solar-icon", "html": "\u003cdiv style=\"font-size: 24px;\"\u003e\u2600\ufe0f\u003c/div\u003e"});
+            marker_8cff480cd6da9afedf42869115600146.setIcon(div_icon_6604ab34eaa8fd3db6415116f0b87ae0);
+        
+    
+            marker_8cff480cd6da9afedf42869115600146.bindTooltip(
+                `<div>
+                     Potential Solar Farm Location
+                 </div>`,
+                {"sticky": true}
+            );
+        
+    
+            var marker_dc14ad62a979aff39149c6fd2a903929 = L.marker(
+                [19.321171723896644, 72.65941984237821],
+                {}
+            ).addTo(map_923e02a2996bae00ad614feeefdcf787);
+        
+    
+            var div_icon_45cf79831b947154d7384893ec9ed2cb = L.divIcon({"className": "solar-icon", "html": "\u003cdiv style=\"font-size: 24px;\"\u003e\u2600\ufe0f\u003c/div\u003e"});
+            marker_dc14ad62a979aff39149c6fd2a903929.setIcon(div_icon_45cf79831b947154d7384893ec9ed2cb);
+        
+    
+            marker_dc14ad62a979aff39149c6fd2a903929.bindTooltip(
+                `<div>
+                     Potential Solar Farm Location
+                 </div>`,
+                {"sticky": true}
+            );
+        
+    
+            var marker_94f2e42b71c53bf739313785c40eec25 = L.marker(
+                [19.42247956939227, 73.17264438597908],
+                {}
+            ).addTo(map_923e02a2996bae00ad614feeefdcf787);
+        
+    
+            var div_icon_a79feb74341ee02dc3d47f598b55d65a = L.divIcon({"className": "solar-icon", "html": "\u003cdiv style=\"font-size: 24px;\"\u003e\u2600\ufe0f\u003c/div\u003e"});
+            marker_94f2e42b71c53bf739313785c40eec25.setIcon(div_icon_a79feb74341ee02dc3d47f598b55d65a);
+        
+    
+            marker_94f2e42b71c53bf739313785c40eec25.bindTooltip(
+                `<div>
+                     Potential Solar Farm Location
+                 </div>`,
+                {"sticky": true}
+            );
+        
+    
+            var marker_580578895c86d0b2c9bd89ff4e7abf16 = L.marker(
+                [18.941817880883313, 72.73519566650627],
+                {}
+            ).addTo(map_923e02a2996bae00ad614feeefdcf787);
+        
+    
+            var div_icon_e812db42dc4cb0ad2e51edb2aa516089 = L.divIcon({"className": "solar-icon", "html": "\u003cdiv style=\"font-size: 24px;\"\u003e\u2600\ufe0f\u003c/div\u003e"});
+            marker_580578895c86d0b2c9bd89ff4e7abf16.setIcon(div_icon_e812db42dc4cb0ad2e51edb2aa516089);
+        
+    
+            marker_580578895c86d0b2c9bd89ff4e7abf16.bindTooltip(
+                `<div>
+                     Potential Solar Farm Location
+                 </div>`,
+                {"sticky": true}
+            );
+        
+    
+            var marker_785d6214f74d5bfdec531907abb232c6 = L.marker(
+                [18.812533747783412, 73.25918961617414],
+                {}
+            ).addTo(map_923e02a2996bae00ad614feeefdcf787);
+        
+    
+            var div_icon_92b9a3df6c1c10f63ac78c7d1a4e16ec = L.divIcon({"className": "solar-icon", "html": "\u003cdiv style=\"font-size: 24px;\"\u003e\u2600\ufe0f\u003c/div\u003e"});
+            marker_785d6214f74d5bfdec531907abb232c6.setIcon(div_icon_92b9a3df6c1c10f63ac78c7d1a4e16ec);
+        
+    
+            marker_785d6214f74d5bfdec531907abb232c6.bindTooltip(
+                `<div>
+                     Potential Solar Farm Location
+                 </div>`,
+                {"sticky": true}
+            );
+        
+    
+            var marker_cda7c08b00bb013a00964b4beee7927a = L.marker(
+                [19.047815252729077, 72.58165130907857],
+                {}
+            ).addTo(map_923e02a2996bae00ad614feeefdcf787);
+        
+    
+            var div_icon_958633af575703493343784fd457f70c = L.divIcon({"className": "solar-icon", "html": "\u003cdiv style=\"font-size: 24px;\"\u003e\u2600\ufe0f\u003c/div\u003e"});
+            marker_cda7c08b00bb013a00964b4beee7927a.setIcon(div_icon_958633af575703493343784fd457f70c);
+        
+    
+            marker_cda7c08b00bb013a00964b4beee7927a.bindTooltip(
+                `<div>
+                     Potential Solar Farm Location
+                 </div>`,
+                {"sticky": true}
+            );
+        
+    
+            var marker_c03b4bcfbd087ac052810d6db9461fa7 = L.marker(
+                [19.134082191206424, 73.29860506584353],
+                {}
+            ).addTo(map_923e02a2996bae00ad614feeefdcf787);
+        
+    
+            var div_icon_de9558dfa2d2379a63af2e47e92c2571 = L.divIcon({"className": "solar-icon", "html": "\u003cdiv style=\"font-size: 24px;\"\u003e\u2600\ufe0f\u003c/div\u003e"});
+            marker_c03b4bcfbd087ac052810d6db9461fa7.setIcon(div_icon_de9558dfa2d2379a63af2e47e92c2571);
+        
+    
+            marker_c03b4bcfbd087ac052810d6db9461fa7.bindTooltip(
+                `<div>
+                     Potential Solar Farm Location
+                 </div>`,
+                {"sticky": true}
+            );
+        
+    
+            var marker_5b586b553ff9d24cbd781ed9e21c39f7 = L.marker(
+                [18.866484365975314, 72.75037850215897],
+                {}
+            ).addTo(map_923e02a2996bae00ad614feeefdcf787);
+        
+    
+            var div_icon_0a952b100f98358a8e1aae797b747973 = L.divIcon({"className": "solar-icon", "html": "\u003cdiv style=\"font-size: 24px;\"\u003e\u2600\ufe0f\u003c/div\u003e"});
+            marker_5b586b553ff9d24cbd781ed9e21c39f7.setIcon(div_icon_0a952b100f98358a8e1aae797b747973);
+        
+    
+            marker_5b586b553ff9d24cbd781ed9e21c39f7.bindTooltip(
+                `<div>
+                     Potential Solar Farm Location
+                 </div>`,
+                {"sticky": true}
+            );
+        
+    
+            var marker_b6af4e5b93b3212ee41f384ae2908dca = L.marker(
+                [19.00967795888623, 73.07311737350803],
+                {}
+            ).addTo(map_923e02a2996bae00ad614feeefdcf787);
+        
+    
+            var div_icon_b1236c33b6597c9151c60573198d6803 = L.divIcon({"className": "solar-icon", "html": "\u003cdiv style=\"font-size: 24px;\"\u003e\u2600\ufe0f\u003c/div\u003e"});
+            marker_b6af4e5b93b3212ee41f384ae2908dca.setIcon(div_icon_b1236c33b6597c9151c60573198d6803);
+        
+    
+            marker_b6af4e5b93b3212ee41f384ae2908dca.bindTooltip(
+                `<div>
+                     Potential Solar Farm Location
+                 </div>`,
+                {"sticky": true}
+            );
+        
+    
+            var marker_61ca6f74f5d07b97676d44af9fb9edea = L.marker(
+                [18.668453874912867, 73.24603267456425],
+                {}
+            ).addTo(map_923e02a2996bae00ad614feeefdcf787);
+        
+    
+            var div_icon_d4cccc4d32af4224517b1cfa8ef4a8ab = L.divIcon({"className": "solar-icon", "html": "\u003cdiv style=\"font-size: 24px;\"\u003e\u2600\ufe0f\u003c/div\u003e"});
+            marker_61ca6f74f5d07b97676d44af9fb9edea.setIcon(div_icon_d4cccc4d32af4224517b1cfa8ef4a8ab);
+        
+    
+            marker_61ca6f74f5d07b97676d44af9fb9edea.bindTooltip(
+                `<div>
+                     Potential Solar Farm Location
+                 </div>`,
+                {"sticky": true}
+            );
+        
+    
+            var marker_ff7073d44117fbf464d9850677d51c83 = L.marker(
+                [19.43857179113801, 73.10038867017732],
+                {}
+            ).addTo(map_923e02a2996bae00ad614feeefdcf787);
+        
+    
+            var div_icon_fdb7f99cebd71ae81f3365fccd82e8cd = L.divIcon({"className": "solar-icon", "html": "\u003cdiv style=\"font-size: 24px;\"\u003e\u2600\ufe0f\u003c/div\u003e"});
+            marker_ff7073d44117fbf464d9850677d51c83.setIcon(div_icon_fdb7f99cebd71ae81f3365fccd82e8cd);
+        
+    
+            marker_ff7073d44117fbf464d9850677d51c83.bindTooltip(
+                `<div>
+                     Potential Solar Farm Location
+                 </div>`,
+                {"sticky": true}
+            );
+        
+    
+            var marker_0a75459d4afc23d9b646751330480b48 = L.marker(
+                [19.498149837494115, 72.98072728309188],
+                {}
+            ).addTo(map_923e02a2996bae00ad614feeefdcf787);
+        
+    
+            var div_icon_85e3f80be0c05cb1e5817a5bddfc6b1b = L.divIcon({"className": "solar-icon", "html": "\u003cdiv style=\"font-size: 24px;\"\u003e\u2600\ufe0f\u003c/div\u003e"});
+            marker_0a75459d4afc23d9b646751330480b48.setIcon(div_icon_85e3f80be0c05cb1e5817a5bddfc6b1b);
+        
+    
+            marker_0a75459d4afc23d9b646751330480b48.bindTooltip(
+                `<div>
+                     Potential Solar Farm Location
+                 </div>`,
+                {"sticky": true}
+            );
+        
+    
+            var marker_68cc467e2c9c028037d9b853fe1e3e1a = L.marker(
+                [19.490153835461427, 73.27661430432326],
+                {}
+            ).addTo(map_923e02a2996bae00ad614feeefdcf787);
+        
+    
+            var div_icon_39a5841edb0cb5072c6fc443c54327bb = L.divIcon({"className": "solar-icon", "html": "\u003cdiv style=\"font-size: 24px;\"\u003e\u2600\ufe0f\u003c/div\u003e"});
+            marker_68cc467e2c9c028037d9b853fe1e3e1a.setIcon(div_icon_39a5841edb0cb5072c6fc443c54327bb);
+        
+    
+            marker_68cc467e2c9c028037d9b853fe1e3e1a.bindTooltip(
+                `<div>
+                     Potential Solar Farm Location
+                 </div>`,
+                {"sticky": true}
+            );
+        
+    
+            var marker_ab83a48a0e8f9d02165f44a7bcc10601 = L.marker(
+                [18.63597191023332, 72.76388260067671],
+                {}
+            ).addTo(map_923e02a2996bae00ad614feeefdcf787);
+        
+    
+            var div_icon_d3e3c1120f26d9ff37dfb4d092c4adad = L.divIcon({"className": "solar-icon", "html": "\u003cdiv style=\"font-size: 24px;\"\u003e\u2600\ufe0f\u003c/div\u003e"});
+            marker_ab83a48a0e8f9d02165f44a7bcc10601.setIcon(div_icon_d3e3c1120f26d9ff37dfb4d092c4adad);
+        
+    
+            marker_ab83a48a0e8f9d02165f44a7bcc10601.bindTooltip(
+                `<div>
+                     Potential Solar Farm Location
+                 </div>`,
+                {"sticky": true}
+            );
+        
+    
+            var marker_02a6092d85625aa52b6863a0ceb3c52d = L.marker(
+                [19.331644130956246, 72.88027114142831],
+                {}
+            ).addTo(map_923e02a2996bae00ad614feeefdcf787);
+        
+    
+            var div_icon_cf862c8423999165077ff024eaff8937 = L.divIcon({"className": "solar-icon", "html": "\u003cdiv style=\"font-size: 24px;\"\u003e\u2600\ufe0f\u003c/div\u003e"});
+            marker_02a6092d85625aa52b6863a0ceb3c52d.setIcon(div_icon_cf862c8423999165077ff024eaff8937);
+        
+    
+            marker_02a6092d85625aa52b6863a0ceb3c52d.bindTooltip(
+                `<div>
+                     Potential Solar Farm Location
+                 </div>`,
+                {"sticky": true}
+            );
+        
+    
+            var marker_757e6f53598a5ec9e5eafde6e3404a32 = L.marker(
+                [19.234354692387846, 72.70030391544151],
+                {}
+            ).addTo(map_923e02a2996bae00ad614feeefdcf787);
+        
+    
+            var div_icon_507542f03cd78ba5264700c01439bb9f = L.divIcon({"className": "solar-icon", "html": "\u003cdiv style=\"font-size: 24px;\"\u003e\u2600\ufe0f\u003c/div\u003e"});
+            marker_757e6f53598a5ec9e5eafde6e3404a32.setIcon(div_icon_507542f03cd78ba5264700c01439bb9f);
+        
+    
+            marker_757e6f53598a5ec9e5eafde6e3404a32.bindTooltip(
+                `<div>
+                     Potential Solar Farm Location
+                 </div>`,
+                {"sticky": true}
+            );
+        
+    
+            var marker_65572494dfaf036fd21da9b7fa5e75fb = L.marker(
+                [19.436993926260975, 73.32598330116164],
+                {}
+            ).addTo(map_923e02a2996bae00ad614feeefdcf787);
+        
+    
+            var div_icon_af27163cf0cb6342e4a775646e391cd7 = L.divIcon({"className": "solar-icon", "html": "\u003cdiv style=\"font-size: 24px;\"\u003e\u2600\ufe0f\u003c/div\u003e"});
+            marker_65572494dfaf036fd21da9b7fa5e75fb.setIcon(div_icon_af27163cf0cb6342e4a775646e391cd7);
+        
+    
+            marker_65572494dfaf036fd21da9b7fa5e75fb.bindTooltip(
+                `<div>
+                     Potential Solar Farm Location
+                 </div>`,
+                {"sticky": true}
+            );
+        
+    
+            var marker_152ec2eed1495a2733f34495cdf29322 = L.marker(
+                [19.070438257934775, 73.22678361527973],
+                {}
+            ).addTo(map_923e02a2996bae00ad614feeefdcf787);
+        
+    
+            var div_icon_43b0cb45e4c0b1419d9a4804602add32 = L.divIcon({"className": "solar-icon", "html": "\u003cdiv style=\"font-size: 24px;\"\u003e\u2600\ufe0f\u003c/div\u003e"});
+            marker_152ec2eed1495a2733f34495cdf29322.setIcon(div_icon_43b0cb45e4c0b1419d9a4804602add32);
+        
+    
+            marker_152ec2eed1495a2733f34495cdf29322.bindTooltip(
+                `<div>
+                     Potential Solar Farm Location
+                 </div>`,
+                {"sticky": true}
+            );
+        
+    
+            var marker_9e6ae761b593e8d841fc701b321361ca = L.marker(
+                [18.724546269915727, 72.6330798209828],
+                {}
+            ).addTo(map_923e02a2996bae00ad614feeefdcf787);
+        
+    
+            var div_icon_415ac81b4c4e250165ce53153adc9f67 = L.divIcon({"className": "solar-icon", "html": "\u003cdiv style=\"font-size: 24px;\"\u003e\u2600\ufe0f\u003c/div\u003e"});
+            marker_9e6ae761b593e8d841fc701b321361ca.setIcon(div_icon_415ac81b4c4e250165ce53153adc9f67);
+        
+    
+            marker_9e6ae761b593e8d841fc701b321361ca.bindTooltip(
+                `<div>
+                     Potential Solar Farm Location
+                 </div>`,
+                {"sticky": true}
+            );
+        
+    
+            var marker_c79b687e713b26f395c73b6420c83031 = L.marker(
+                [18.986047980041135, 72.8460744330238],
+                {}
+            ).addTo(map_923e02a2996bae00ad614feeefdcf787);
+        
+    
+            var div_icon_747fae439d8b03258eb03f7726eb58b8 = L.divIcon({"className": "solar-icon", "html": "\u003cdiv style=\"font-size: 24px;\"\u003e\u2600\ufe0f\u003c/div\u003e"});
+            marker_c79b687e713b26f395c73b6420c83031.setIcon(div_icon_747fae439d8b03258eb03f7726eb58b8);
+        
+    
+            marker_c79b687e713b26f395c73b6420c83031.bindTooltip(
+                `<div>
+                     Potential Solar Farm Location
+                 </div>`,
+                {"sticky": true}
+            );
+        
+    
+            var marker_a5da2f06f73a07a49cfbc40c78c09ed2 = L.marker(
+                [18.964428372280203, 72.48220638696858],
+                {}
+            ).addTo(map_923e02a2996bae00ad614feeefdcf787);
+        
+    
+            var div_icon_1a326114f15ac4d21adbec73eae0b479 = L.divIcon({"className": "solar-icon", "html": "\u003cdiv style=\"font-size: 24px;\"\u003e\u2600\ufe0f\u003c/div\u003e"});
+            marker_a5da2f06f73a07a49cfbc40c78c09ed2.setIcon(div_icon_1a326114f15ac4d21adbec73eae0b479);
+        
+    
+            marker_a5da2f06f73a07a49cfbc40c78c09ed2.bindTooltip(
+                `<div>
+                     Potential Solar Farm Location
+                 </div>`,
+                {"sticky": true}
+            );
+        
+    
+            var marker_45491457f18f8c1f7c43bd2dde5d13c9 = L.marker(
+                [18.687539096062704, 72.6734432448963],
+                {}
+            ).addTo(map_923e02a2996bae00ad614feeefdcf787);
+        
+    
+            var div_icon_b2e529fc0dc08c35bbba414eb691410c = L.divIcon({"className": "solar-icon", "html": "\u003cdiv style=\"font-size: 24px;\"\u003e\u2600\ufe0f\u003c/div\u003e"});
+            marker_45491457f18f8c1f7c43bd2dde5d13c9.setIcon(div_icon_b2e529fc0dc08c35bbba414eb691410c);
+        
+    
+            marker_45491457f18f8c1f7c43bd2dde5d13c9.bindTooltip(
+                `<div>
+                     Potential Solar Farm Location
+                 </div>`,
+                {"sticky": true}
+            );
+        
+    
+            var marker_7f8c9e73cb367577e6c6f8e8416a4e40 = L.marker(
+                [19.093085113114668, 72.6724615267597],
+                {}
+            ).addTo(map_923e02a2996bae00ad614feeefdcf787);
+        
+    
+            var div_icon_5daa8e82101c043e286ed29d9d68e33b = L.divIcon({"className": "solar-icon", "html": "\u003cdiv style=\"font-size: 24px;\"\u003e\u2600\ufe0f\u003c/div\u003e"});
+            marker_7f8c9e73cb367577e6c6f8e8416a4e40.setIcon(div_icon_5daa8e82101c043e286ed29d9d68e33b);
+        
+    
+            marker_7f8c9e73cb367577e6c6f8e8416a4e40.bindTooltip(
+                `<div>
+                     Potential Solar Farm Location
+                 </div>`,
+                {"sticky": true}
+            );
+        
+    
+            var marker_689e844b67dda10911717f5a8c95fe58 = L.marker(
+                [18.88248178573536, 72.90085179390893],
+                {}
+            ).addTo(map_923e02a2996bae00ad614feeefdcf787);
+        
+    
+            var div_icon_658eb8b1600a32362f710d03642f89cd = L.divIcon({"className": "solar-icon", "html": "\u003cdiv style=\"font-size: 24px;\"\u003e\u2600\ufe0f\u003c/div\u003e"});
+            marker_689e844b67dda10911717f5a8c95fe58.setIcon(div_icon_658eb8b1600a32362f710d03642f89cd);
+        
+    
+            marker_689e844b67dda10911717f5a8c95fe58.bindTooltip(
+                `<div>
+                     Potential Solar Farm Location
+                 </div>`,
+                {"sticky": true}
+            );
+        
+    
+            var marker_12c82c0e834034175dbe9f14e8a840ee = L.marker(
+                [19.322500937871567, 72.54824837305263],
+                {}
+            ).addTo(map_923e02a2996bae00ad614feeefdcf787);
+        
+    
+            var div_icon_4cea5cd7ae1bbdcb4f91d433ea731a4e = L.divIcon({"className": "solar-icon", "html": "\u003cdiv style=\"font-size: 24px;\"\u003e\u2600\ufe0f\u003c/div\u003e"});
+            marker_12c82c0e834034175dbe9f14e8a840ee.setIcon(div_icon_4cea5cd7ae1bbdcb4f91d433ea731a4e);
+        
+    
+            marker_12c82c0e834034175dbe9f14e8a840ee.bindTooltip(
+                `<div>
+                     Potential Solar Farm Location
+                 </div>`,
+                {"sticky": true}
+            );
+        
+    
+            var marker_daf1a901e9f2b3bc3bf6f0b1e065c9a4 = L.marker(
+                [18.769614364392663, 72.5542780425396],
+                {}
+            ).addTo(map_923e02a2996bae00ad614feeefdcf787);
+        
+    
+            var div_icon_6efa82f449476e731358bad260cc3837 = L.divIcon({"className": "solar-icon", "html": "\u003cdiv style=\"font-size: 24px;\"\u003e\u2600\ufe0f\u003c/div\u003e"});
+            marker_daf1a901e9f2b3bc3bf6f0b1e065c9a4.setIcon(div_icon_6efa82f449476e731358bad260cc3837);
+        
+    
+            marker_daf1a901e9f2b3bc3bf6f0b1e065c9a4.bindTooltip(
+                `<div>
+                     Potential Solar Farm Location
+                 </div>`,
+                {"sticky": true}
+            );
+        
+    
+            var marker_cc9e8ba26de651ed399fd9fd0b861f41 = L.marker(
+                [18.82716622257262, 72.65434747359723],
+                {}
+            ).addTo(map_923e02a2996bae00ad614feeefdcf787);
+        
+    
+            var div_icon_d1175e432691d6e7a30079f0de3d4791 = L.divIcon({"className": "solar-icon", "html": "\u003cdiv style=\"font-size: 24px;\"\u003e\u2600\ufe0f\u003c/div\u003e"});
+            marker_cc9e8ba26de651ed399fd9fd0b861f41.setIcon(div_icon_d1175e432691d6e7a30079f0de3d4791);
+        
+    
+            marker_cc9e8ba26de651ed399fd9fd0b861f41.bindTooltip(
+                `<div>
+                     Potential Solar Farm Location
+                 </div>`,
+                {"sticky": true}
+            );
+        
+    
+            var marker_1a2133b34fb7a7dc3dc8a915e9e6562b = L.marker(
+                [18.954775898506057, 72.90487687307932],
+                {}
+            ).addTo(map_923e02a2996bae00ad614feeefdcf787);
+        
+    
+            var div_icon_5370e136c20b831483216d3cb5113e70 = L.divIcon({"className": "solar-icon", "html": "\u003cdiv style=\"font-size: 24px;\"\u003e\u2600\ufe0f\u003c/div\u003e"});
+            marker_1a2133b34fb7a7dc3dc8a915e9e6562b.setIcon(div_icon_5370e136c20b831483216d3cb5113e70);
+        
+    
+            marker_1a2133b34fb7a7dc3dc8a915e9e6562b.bindTooltip(
+                `<div>
+                     Potential Solar Farm Location
+                 </div>`,
+                {"sticky": true}
+            );
+        
+    
+            var marker_e1b7e4e0b6f3152ae1b9f774fbc4ade2 = L.marker(
+                [19.218176048772154, 72.42349711937653],
+                {}
+            ).addTo(map_923e02a2996bae00ad614feeefdcf787);
+        
+    
+            var div_icon_ad0a7e4bf73b40b2a861b6dacf22e599 = L.divIcon({"className": "solar-icon", "html": "\u003cdiv style=\"font-size: 24px;\"\u003e\u2600\ufe0f\u003c/div\u003e"});
+            marker_e1b7e4e0b6f3152ae1b9f774fbc4ade2.setIcon(div_icon_ad0a7e4bf73b40b2a861b6dacf22e599);
+        
+    
+            marker_e1b7e4e0b6f3152ae1b9f774fbc4ade2.bindTooltip(
+                `<div>
+                     Potential Solar Farm Location
+                 </div>`,
+                {"sticky": true}
+            );
+        
+    
+            var marker_5b95f31f1a7458059973b38340549db4 = L.marker(
+                [19.31418008576383, 72.88078612633043],
+                {}
+            ).addTo(map_923e02a2996bae00ad614feeefdcf787);
+        
+    
+            var div_icon_bdf893a234fc01b4e84ebf286461e334 = L.divIcon({"className": "solar-icon", "html": "\u003cdiv style=\"font-size: 24px;\"\u003e\u2600\ufe0f\u003c/div\u003e"});
+            marker_5b95f31f1a7458059973b38340549db4.setIcon(div_icon_bdf893a234fc01b4e84ebf286461e334);
+        
+    
+            marker_5b95f31f1a7458059973b38340549db4.bindTooltip(
+                `<div>
+                     Potential Solar Farm Location
+                 </div>`,
+                {"sticky": true}
+            );
+        
+    
+            var marker_3905c66fe3216c780501790b725e0c64 = L.marker(
+                [19.250011036287443, 72.70834069674629],
+                {}
+            ).addTo(map_923e02a2996bae00ad614feeefdcf787);
+        
+    
+            var div_icon_afec5b1d021ea66708062025388fef90 = L.divIcon({"className": "solar-icon", "html": "\u003cdiv style=\"font-size: 24px;\"\u003e\u2600\ufe0f\u003c/div\u003e"});
+            marker_3905c66fe3216c780501790b725e0c64.setIcon(div_icon_afec5b1d021ea66708062025388fef90);
+        
+    
+            marker_3905c66fe3216c780501790b725e0c64.bindTooltip(
+                `<div>
+                     Potential Solar Farm Location
+                 </div>`,
+                {"sticky": true}
+            );
+        
+    
+            var marker_5c21b5cc9a50c7e8608c22b44d81ffdb = L.marker(
+                [18.930946109352053, 72.9881008159993],
+                {}
+            ).addTo(map_923e02a2996bae00ad614feeefdcf787);
+        
+    
+            var div_icon_d82ba93192a40599282becd83a16d49f = L.divIcon({"className": "solar-icon", "html": "\u003cdiv style=\"font-size: 24px;\"\u003e\u2600\ufe0f\u003c/div\u003e"});
+            marker_5c21b5cc9a50c7e8608c22b44d81ffdb.setIcon(div_icon_d82ba93192a40599282becd83a16d49f);
+        
+    
+            marker_5c21b5cc9a50c7e8608c22b44d81ffdb.bindTooltip(
+                `<div>
+                     Potential Solar Farm Location
+                 </div>`,
+                {"sticky": true}
+            );
+        
+    
+            var marker_5b16e784e42eae114f0de8244e205ab1 = L.marker(
+                [19.45533105790241, 72.79622045802583],
+                {}
+            ).addTo(map_923e02a2996bae00ad614feeefdcf787);
+        
+    
+            var div_icon_602c5076ce34caa0c1fea6522eafc8be = L.divIcon({"className": "solar-icon", "html": "\u003cdiv style=\"font-size: 24px;\"\u003e\u2600\ufe0f\u003c/div\u003e"});
+            marker_5b16e784e42eae114f0de8244e205ab1.setIcon(div_icon_602c5076ce34caa0c1fea6522eafc8be);
+        
+    
+            marker_5b16e784e42eae114f0de8244e205ab1.bindTooltip(
+                `<div>
+                     Potential Solar Farm Location
+                 </div>`,
+                {"sticky": true}
+            );
+        
+    
+            var marker_46b421e84e3c4b89e4b2b5c9aca0723d = L.marker(
+                [19.08843800954401, 72.65771008795355],
+                {}
+            ).addTo(map_923e02a2996bae00ad614feeefdcf787);
+        
+    
+            var div_icon_331a0ebcb86bc068c1ff70eac5b00046 = L.divIcon({"className": "solar-icon", "html": "\u003cdiv style=\"font-size: 24px;\"\u003e\u2600\ufe0f\u003c/div\u003e"});
+            marker_46b421e84e3c4b89e4b2b5c9aca0723d.setIcon(div_icon_331a0ebcb86bc068c1ff70eac5b00046);
+        
+    
+            marker_46b421e84e3c4b89e4b2b5c9aca0723d.bindTooltip(
+                `<div>
+                     Potential Solar Farm Location
+                 </div>`,
+                {"sticky": true}
+            );
+        
+    
+            var marker_38b444f00e34461a579eb16ab64b3010 = L.marker(
+                [19.308000636981536, 73.04557452851815],
+                {}
+            ).addTo(map_923e02a2996bae00ad614feeefdcf787);
+        
+    
+            var div_icon_986a6808d4805e8d628b9d00be030a98 = L.divIcon({"className": "solar-icon", "html": "\u003cdiv style=\"font-size: 24px;\"\u003e\u2600\ufe0f\u003c/div\u003e"});
+            marker_38b444f00e34461a579eb16ab64b3010.setIcon(div_icon_986a6808d4805e8d628b9d00be030a98);
+        
+    
+            marker_38b444f00e34461a579eb16ab64b3010.bindTooltip(
+                `<div>
+                     Potential Solar Farm Location
+                 </div>`,
+                {"sticky": true}
+            );
+        
+    
+            var marker_39db9f1e487c7d56afde87636eead0b5 = L.marker(
+                [19.232343757263724, 73.15686393599877],
+                {}
+            ).addTo(map_923e02a2996bae00ad614feeefdcf787);
+        
+    
+            var div_icon_bdd173c00bb84140fa7b7ad2fa7cb292 = L.divIcon({"className": "solar-icon", "html": "\u003cdiv style=\"font-size: 24px;\"\u003e\u2600\ufe0f\u003c/div\u003e"});
+            marker_39db9f1e487c7d56afde87636eead0b5.setIcon(div_icon_bdd173c00bb84140fa7b7ad2fa7cb292);
+        
+    
+            marker_39db9f1e487c7d56afde87636eead0b5.bindTooltip(
+                `<div>
+                     Potential Solar Farm Location
+                 </div>`,
+                {"sticky": true}
+            );
+        
+    
+            var marker_e8f1035f46b69f689d2b1143ef107a56 = L.marker(
+                [19.43494036916931, 73.31799447905044],
+                {}
+            ).addTo(map_923e02a2996bae00ad614feeefdcf787);
+        
+    
+            var div_icon_a622a45a60193adb2e55a72759ba54d1 = L.divIcon({"className": "solar-icon", "html": "\u003cdiv style=\"font-size: 24px;\"\u003e\u2600\ufe0f\u003c/div\u003e"});
+            marker_e8f1035f46b69f689d2b1143ef107a56.setIcon(div_icon_a622a45a60193adb2e55a72759ba54d1);
+        
+    
+            marker_e8f1035f46b69f689d2b1143ef107a56.bindTooltip(
+                `<div>
+                     Potential Solar Farm Location
+                 </div>`,
+                {"sticky": true}
+            );
+        
+    
+            var marker_daabae63e0fb27332965d172a1071585 = L.marker(
+                [18.666008550577857, 73.25945634084123],
+                {}
+            ).addTo(map_923e02a2996bae00ad614feeefdcf787);
+        
+    
+            var div_icon_7db9aac333fd372308d99745823062d5 = L.divIcon({"className": "solar-icon", "html": "\u003cdiv style=\"font-size: 24px;\"\u003e\u2600\ufe0f\u003c/div\u003e"});
+            marker_daabae63e0fb27332965d172a1071585.setIcon(div_icon_7db9aac333fd372308d99745823062d5);
+        
+    
+            marker_daabae63e0fb27332965d172a1071585.bindTooltip(
+                `<div>
+                     Potential Solar Farm Location
+                 </div>`,
+                {"sticky": true}
+            );
+        
+    
+            var marker_4e8e74c070fd9131c7d70a6ce02c251a = L.marker(
+                [19.381273897333575, 72.93574075658628],
+                {}
+            ).addTo(map_923e02a2996bae00ad614feeefdcf787);
+        
+    
+            var div_icon_426da2e82c5105b1148f9cefcbf75e42 = L.divIcon({"className": "solar-icon", "html": "\u003cdiv style=\"font-size: 24px;\"\u003e\u2600\ufe0f\u003c/div\u003e"});
+            marker_4e8e74c070fd9131c7d70a6ce02c251a.setIcon(div_icon_426da2e82c5105b1148f9cefcbf75e42);
+        
+    
+            marker_4e8e74c070fd9131c7d70a6ce02c251a.bindTooltip(
+                `<div>
+                     Potential Solar Farm Location
+                 </div>`,
+                {"sticky": true}
+            );
+        
+    
+            var marker_8c91ba837b679d5d923b32d3f97c8a69 = L.marker(
+                [19.432165813941918, 72.55886992227687],
+                {}
+            ).addTo(map_923e02a2996bae00ad614feeefdcf787);
+        
+    
+            var div_icon_391bd2973530f0380621a310993124b1 = L.divIcon({"className": "solar-icon", "html": "\u003cdiv style=\"font-size: 24px;\"\u003e\u2600\ufe0f\u003c/div\u003e"});
+            marker_8c91ba837b679d5d923b32d3f97c8a69.setIcon(div_icon_391bd2973530f0380621a310993124b1);
+        
+    
+            marker_8c91ba837b679d5d923b32d3f97c8a69.bindTooltip(
+                `<div>
+                     Potential Solar Farm Location
+                 </div>`,
+                {"sticky": true}
+            );
+        
+    
+            var marker_28f828339446d5c483d60c127fe53cb5 = L.marker(
+                [18.814322190158588, 72.92146330155298],
+                {}
+            ).addTo(map_923e02a2996bae00ad614feeefdcf787);
+        
+    
+            var div_icon_8560cd1a19a8144ea8c2ae66c9608ae9 = L.divIcon({"className": "solar-icon", "html": "\u003cdiv style=\"font-size: 24px;\"\u003e\u2600\ufe0f\u003c/div\u003e"});
+            marker_28f828339446d5c483d60c127fe53cb5.setIcon(div_icon_8560cd1a19a8144ea8c2ae66c9608ae9);
+        
+    
+            marker_28f828339446d5c483d60c127fe53cb5.bindTooltip(
+                `<div>
+                     Potential Solar Farm Location
+                 </div>`,
+                {"sticky": true}
+            );
+        
+    
+            var marker_312d9369a7a1b9de7be18917b7a8075d = L.marker(
+                [19.259930287453876, 72.49117951080407],
+                {}
+            ).addTo(map_923e02a2996bae00ad614feeefdcf787);
+        
+    
+            var div_icon_fce068528f19838f8c95cd6776113948 = L.divIcon({"className": "solar-icon", "html": "\u003cdiv style=\"font-size: 24px;\"\u003e\u2600\ufe0f\u003c/div\u003e"});
+            marker_312d9369a7a1b9de7be18917b7a8075d.setIcon(div_icon_fce068528f19838f8c95cd6776113948);
+        
+    
+            marker_312d9369a7a1b9de7be18917b7a8075d.bindTooltip(
+                `<div>
+                     Potential Solar Farm Location
+                 </div>`,
+                {"sticky": true}
+            );
+        
+    
+            var marker_db840116ee331f602fcb1c29f5c0f177 = L.marker(
+                [18.783006872501506, 72.52247720321537],
+                {}
+            ).addTo(map_923e02a2996bae00ad614feeefdcf787);
+        
+    
+            var div_icon_2bb162a17ab7aa78b389aab27c20e2b1 = L.divIcon({"className": "solar-icon", "html": "\u003cdiv style=\"font-size: 24px;\"\u003e\u2600\ufe0f\u003c/div\u003e"});
+            marker_db840116ee331f602fcb1c29f5c0f177.setIcon(div_icon_2bb162a17ab7aa78b389aab27c20e2b1);
+        
+    
+            marker_db840116ee331f602fcb1c29f5c0f177.bindTooltip(
+                `<div>
+                     Potential Solar Farm Location
+                 </div>`,
+                {"sticky": true}
+            );
+        
+    
+            var marker_1c8766517e9bea53bab00e36cea853ad = L.marker(
+                [19.238963878210324, 73.20713133235442],
+                {}
+            ).addTo(map_923e02a2996bae00ad614feeefdcf787);
+        
+    
+            var div_icon_b4fde3cd6f6bd037837c558755774325 = L.divIcon({"className": "solar-icon", "html": "\u003cdiv style=\"font-size: 24px;\"\u003e\u2600\ufe0f\u003c/div\u003e"});
+            marker_1c8766517e9bea53bab00e36cea853ad.setIcon(div_icon_b4fde3cd6f6bd037837c558755774325);
+        
+    
+            marker_1c8766517e9bea53bab00e36cea853ad.bindTooltip(
+                `<div>
+                     Potential Solar Farm Location
+                 </div>`,
+                {"sticky": true}
+            );
+        
+    
+            var marker_27fa1e49d49d9a4cfbcaa3787965b074 = L.marker(
+                [19.301676857257505, 72.50617762884717],
+                {}
+            ).addTo(map_923e02a2996bae00ad614feeefdcf787);
+        
+    
+            var div_icon_ff47846e646e0cf9ea3a5c74e4cee2fc = L.divIcon({"className": "solar-icon", "html": "\u003cdiv style=\"font-size: 24px;\"\u003e\u2600\ufe0f\u003c/div\u003e"});
+            marker_27fa1e49d49d9a4cfbcaa3787965b074.setIcon(div_icon_ff47846e646e0cf9ea3a5c74e4cee2fc);
+        
+    
+            marker_27fa1e49d49d9a4cfbcaa3787965b074.bindTooltip(
+                `<div>
+                     Potential Solar Farm Location
+                 </div>`,
+                {"sticky": true}
+            );
+        
+    
+            var marker_5c960de7d99334389b7259db281b8db6 = L.marker(
+                [19.047238800298082, 73.00754508351278],
+                {}
+            ).addTo(map_923e02a2996bae00ad614feeefdcf787);
+        
+    
+            var div_icon_05e4609f90c046115345157a39a4c317 = L.divIcon({"className": "solar-icon", "html": "\u003cdiv style=\"font-size: 24px;\"\u003e\u2600\ufe0f\u003c/div\u003e"});
+            marker_5c960de7d99334389b7259db281b8db6.setIcon(div_icon_05e4609f90c046115345157a39a4c317);
+        
+    
+            marker_5c960de7d99334389b7259db281b8db6.bindTooltip(
+                `<div>
+                     Potential Solar Farm Location
+                 </div>`,
+                {"sticky": true}
+            );
+        
+    
+            var marker_6cda7f69fd2deba81a92cb424fc41ed0 = L.marker(
+                [19.46196421336712, 73.20127917023801],
+                {}
+            ).addTo(map_923e02a2996bae00ad614feeefdcf787);
+        
+    
+            var div_icon_5f401d928c069715f7bf28f402a2981b = L.divIcon({"className": "solar-icon", "html": "\u003cdiv style=\"font-size: 24px;\"\u003e\u2600\ufe0f\u003c/div\u003e"});
+            marker_6cda7f69fd2deba81a92cb424fc41ed0.setIcon(div_icon_5f401d928c069715f7bf28f402a2981b);
+        
+    
+            marker_6cda7f69fd2deba81a92cb424fc41ed0.bindTooltip(
+                `<div>
+                     Potential Solar Farm Location
+                 </div>`,
+                {"sticky": true}
+            );
+        
+    
+            var marker_ec88ec616c46774c7458d822103f3029 = L.marker(
+                [18.938941036332462, 73.07258114179832],
+                {}
+            ).addTo(map_923e02a2996bae00ad614feeefdcf787);
+        
+    
+            var div_icon_4d72cf6329211361496faaac8c0bde90 = L.divIcon({"className": "solar-icon", "html": "\u003cdiv style=\"font-size: 24px;\"\u003e\u2600\ufe0f\u003c/div\u003e"});
+            marker_ec88ec616c46774c7458d822103f3029.setIcon(div_icon_4d72cf6329211361496faaac8c0bde90);
+        
+    
+            marker_ec88ec616c46774c7458d822103f3029.bindTooltip(
+                `<div>
+                     Potential Solar Farm Location
+                 </div>`,
+                {"sticky": true}
+            );
+        
+    
+            var marker_af298b738072d84bb7827043718e89c1 = L.marker(
+                [18.98023100097899, 72.93261709271562],
+                {}
+            ).addTo(map_923e02a2996bae00ad614feeefdcf787);
+        
+    
+            var div_icon_bd13081a8688cacdfca0e4a416230bd5 = L.divIcon({"className": "solar-icon", "html": "\u003cdiv style=\"font-size: 24px;\"\u003e\u2600\ufe0f\u003c/div\u003e"});
+            marker_af298b738072d84bb7827043718e89c1.setIcon(div_icon_bd13081a8688cacdfca0e4a416230bd5);
+        
+    
+            marker_af298b738072d84bb7827043718e89c1.bindTooltip(
+                `<div>
+                     Potential Solar Farm Location
+                 </div>`,
+                {"sticky": true}
+            );
+        
+    
+            var marker_f9fadf13ed5482c0fd31accf73e1f733 = L.marker(
+                [18.743066880143132, 72.58264617610662],
+                {}
+            ).addTo(map_923e02a2996bae00ad614feeefdcf787);
+        
+    
+            var div_icon_a42fd6d0b3c08a98d20173a441d8f4b2 = L.divIcon({"className": "solar-icon", "html": "\u003cdiv style=\"font-size: 24px;\"\u003e\u2600\ufe0f\u003c/div\u003e"});
+            marker_f9fadf13ed5482c0fd31accf73e1f733.setIcon(div_icon_a42fd6d0b3c08a98d20173a441d8f4b2);
+        
+    
+            marker_f9fadf13ed5482c0fd31accf73e1f733.bindTooltip(
+                `<div>
+                     Potential Solar Farm Location
+                 </div>`,
+                {"sticky": true}
+            );
+        
+    
+            var marker_b35f2a5e23c0e8d9da06eba25f92098e = L.marker(
+                [18.982319202069924, 72.6594436526404],
+                {}
+            ).addTo(map_923e02a2996bae00ad614feeefdcf787);
+        
+    
+            var div_icon_bb10f519b96f8e9b7ef6c8ccfbd8cf00 = L.divIcon({"className": "solar-icon", "html": "\u003cdiv style=\"font-size: 24px;\"\u003e\u2600\ufe0f\u003c/div\u003e"});
+            marker_b35f2a5e23c0e8d9da06eba25f92098e.setIcon(div_icon_bb10f519b96f8e9b7ef6c8ccfbd8cf00);
+        
+    
+            marker_b35f2a5e23c0e8d9da06eba25f92098e.bindTooltip(
+                `<div>
+                     Potential Solar Farm Location
+                 </div>`,
+                {"sticky": true}
+            );
+        
+    
+            var marker_0744c1b8ae913f8c2ae60488099c19c0 = L.marker(
+                [19.265883042097105, 72.54756345629967],
+                {}
+            ).addTo(map_923e02a2996bae00ad614feeefdcf787);
+        
+    
+            var div_icon_4399f59f4a4428707da466fa2c36ec86 = L.divIcon({"className": "solar-icon", "html": "\u003cdiv style=\"font-size: 24px;\"\u003e\u2600\ufe0f\u003c/div\u003e"});
+            marker_0744c1b8ae913f8c2ae60488099c19c0.setIcon(div_icon_4399f59f4a4428707da466fa2c36ec86);
+        
+    
+            marker_0744c1b8ae913f8c2ae60488099c19c0.bindTooltip(
+                `<div>
+                     Potential Solar Farm Location
+                 </div>`,
+                {"sticky": true}
+            );
+        
+    
+            var marker_19705bfeffd71677ade94927b3451873 = L.marker(
+                [18.652447694621912, 72.82682614356898],
+                {}
+            ).addTo(map_923e02a2996bae00ad614feeefdcf787);
+        
+    
+            var div_icon_51f415d73c2e50fccef9fbb8ecfd631d = L.divIcon({"className": "solar-icon", "html": "\u003cdiv style=\"font-size: 24px;\"\u003e\u2600\ufe0f\u003c/div\u003e"});
+            marker_19705bfeffd71677ade94927b3451873.setIcon(div_icon_51f415d73c2e50fccef9fbb8ecfd631d);
+        
+    
+            marker_19705bfeffd71677ade94927b3451873.bindTooltip(
+                `<div>
+                     Potential Solar Farm Location
+                 </div>`,
+                {"sticky": true}
+            );
+        
+    
+            var marker_acd51c9259463959a192396b06c490b5 = L.marker(
+                [19.092687185271476, 72.49672788573594],
+                {}
+            ).addTo(map_923e02a2996bae00ad614feeefdcf787);
+        
+    
+            var div_icon_640eb55cfae4e1261f9c12e018fd6205 = L.divIcon({"className": "solar-icon", "html": "\u003cdiv style=\"font-size: 24px;\"\u003e\u2600\ufe0f\u003c/div\u003e"});
+            marker_acd51c9259463959a192396b06c490b5.setIcon(div_icon_640eb55cfae4e1261f9c12e018fd6205);
+        
+    
+            marker_acd51c9259463959a192396b06c490b5.bindTooltip(
+                `<div>
+                     Potential Solar Farm Location
+                 </div>`,
+                {"sticky": true}
+            );
+        
+    
+            var marker_62fc7aaf77be40c24ee087e7dc9e298f = L.marker(
+                [19.128421300715196, 72.67216836374726],
+                {}
+            ).addTo(map_923e02a2996bae00ad614feeefdcf787);
+        
+    
+            var div_icon_71730aaaca2ed1715f88d4f913f4958f = L.divIcon({"className": "solar-icon", "html": "\u003cdiv style=\"font-size: 24px;\"\u003e\u2600\ufe0f\u003c/div\u003e"});
+            marker_62fc7aaf77be40c24ee087e7dc9e298f.setIcon(div_icon_71730aaaca2ed1715f88d4f913f4958f);
+        
+    
+            marker_62fc7aaf77be40c24ee087e7dc9e298f.bindTooltip(
+                `<div>
+                     Potential Solar Farm Location
+                 </div>`,
+                {"sticky": true}
+            );
+        
+    
+            var marker_f3fe3cd218dceb9ab2d123e9921989b6 = L.marker(
+                [18.84313684392832, 72.64432415433546],
+                {}
+            ).addTo(map_923e02a2996bae00ad614feeefdcf787);
+        
+    
+            var div_icon_25a2003bf3b8c5fd484e907e7a4f1da2 = L.divIcon({"className": "solar-icon", "html": "\u003cdiv style=\"font-size: 24px;\"\u003e\u2600\ufe0f\u003c/div\u003e"});
+            marker_f3fe3cd218dceb9ab2d123e9921989b6.setIcon(div_icon_25a2003bf3b8c5fd484e907e7a4f1da2);
+        
+    
+            marker_f3fe3cd218dceb9ab2d123e9921989b6.bindTooltip(
+                `<div>
+                     Potential Solar Farm Location
+                 </div>`,
+                {"sticky": true}
+            );
+        
+    
+            var marker_3e86326c5abebdbb05508af54091b78c = L.marker(
+                [19.312254693690292, 72.99948287179934],
+                {}
+            ).addTo(map_923e02a2996bae00ad614feeefdcf787);
+        
+    
+            var div_icon_9b87ed4b8a84eed1cd27990ebad335e4 = L.divIcon({"className": "solar-icon", "html": "\u003cdiv style=\"font-size: 24px;\"\u003e\u2600\ufe0f\u003c/div\u003e"});
+            marker_3e86326c5abebdbb05508af54091b78c.setIcon(div_icon_9b87ed4b8a84eed1cd27990ebad335e4);
+        
+    
+            marker_3e86326c5abebdbb05508af54091b78c.bindTooltip(
+                `<div>
+                     Potential Solar Farm Location
+                 </div>`,
+                {"sticky": true}
+            );
+        
+    
+            var marker_fcb2d6fe22933bc7c374dc52675e7e1b = L.marker(
+                [18.753140608040628, 73.00394025291286],
+                {}
+            ).addTo(map_923e02a2996bae00ad614feeefdcf787);
+        
+    
+            var div_icon_6b06e2b7b76c6acbe35a23549ecd8af9 = L.divIcon({"className": "solar-icon", "html": "\u003cdiv style=\"font-size: 24px;\"\u003e\u2600\ufe0f\u003c/div\u003e"});
+            marker_fcb2d6fe22933bc7c374dc52675e7e1b.setIcon(div_icon_6b06e2b7b76c6acbe35a23549ecd8af9);
+        
+    
+            marker_fcb2d6fe22933bc7c374dc52675e7e1b.bindTooltip(
+                `<div>
+                     Potential Solar Farm Location
+                 </div>`,
+                {"sticky": true}
+            );
+        
+    
+            var marker_05718b94104070911948e8178db87be6 = L.marker(
+                [19.218460661520087, 72.95986948097415],
+                {}
+            ).addTo(map_923e02a2996bae00ad614feeefdcf787);
+        
+    
+            var div_icon_8b99932d68542d6470715e236164fcf0 = L.divIcon({"className": "solar-icon", "html": "\u003cdiv style=\"font-size: 24px;\"\u003e\u2600\ufe0f\u003c/div\u003e"});
+            marker_05718b94104070911948e8178db87be6.setIcon(div_icon_8b99932d68542d6470715e236164fcf0);
+        
+    
+            marker_05718b94104070911948e8178db87be6.bindTooltip(
+                `<div>
+                     Potential Solar Farm Location
+                 </div>`,
+                {"sticky": true}
+            );
+        
+    
+            var marker_deb1ceedfe407061e69b879118026b68 = L.marker(
+                [19.0403824153649, 73.34967758719264],
+                {}
+            ).addTo(map_923e02a2996bae00ad614feeefdcf787);
+        
+    
+            var div_icon_82d993dd04912f7cffff2ac00961c2b1 = L.divIcon({"className": "solar-icon", "html": "\u003cdiv style=\"font-size: 24px;\"\u003e\u2600\ufe0f\u003c/div\u003e"});
+            marker_deb1ceedfe407061e69b879118026b68.setIcon(div_icon_82d993dd04912f7cffff2ac00961c2b1);
+        
+    
+            marker_deb1ceedfe407061e69b879118026b68.bindTooltip(
+                `<div>
+                     Potential Solar Farm Location
+                 </div>`,
+                {"sticky": true}
+            );
+        
+    
+            var marker_5ad16a6b8dbc30cad48ba0f53b10e582 = L.marker(
+                [19.51872289017112, 72.87193240425438],
+                {}
+            ).addTo(map_923e02a2996bae00ad614feeefdcf787);
+        
+    
+            var div_icon_6633640355f98f8e282495d7668dc8af = L.divIcon({"className": "solar-icon", "html": "\u003cdiv style=\"font-size: 24px;\"\u003e\u2600\ufe0f\u003c/div\u003e"});
+            marker_5ad16a6b8dbc30cad48ba0f53b10e582.setIcon(div_icon_6633640355f98f8e282495d7668dc8af);
+        
+    
+            marker_5ad16a6b8dbc30cad48ba0f53b10e582.bindTooltip(
+                `<div>
+                     Potential Solar Farm Location
+                 </div>`,
+                {"sticky": true}
+            );
+        
+    
+            var marker_63a5f2950c0c1a443fe52c43e0d06d38 = L.marker(
+                [19.004256229484564, 72.59837524201035],
+                {}
+            ).addTo(map_923e02a2996bae00ad614feeefdcf787);
+        
+    
+            var div_icon_48cce6b2bb74cf80031946b940cd5cdf = L.divIcon({"className": "solar-icon", "html": "\u003cdiv style=\"font-size: 24px;\"\u003e\u2600\ufe0f\u003c/div\u003e"});
+            marker_63a5f2950c0c1a443fe52c43e0d06d38.setIcon(div_icon_48cce6b2bb74cf80031946b940cd5cdf);
+        
+    
+            marker_63a5f2950c0c1a443fe52c43e0d06d38.bindTooltip(
+                `<div>
+                     Potential Solar Farm Location
+                 </div>`,
+                {"sticky": true}
+            );
+        
+    
+            var marker_7c02d95c3636a25de38f8e9aaf6611a5 = L.marker(
+                [18.91525689061378, 73.10240770609605],
+                {}
+            ).addTo(map_923e02a2996bae00ad614feeefdcf787);
+        
+    
+            var div_icon_839b08da27355d7f9b7e8d2e78f4e5f0 = L.divIcon({"className": "solar-icon", "html": "\u003cdiv style=\"font-size: 24px;\"\u003e\u2600\ufe0f\u003c/div\u003e"});
+            marker_7c02d95c3636a25de38f8e9aaf6611a5.setIcon(div_icon_839b08da27355d7f9b7e8d2e78f4e5f0);
+        
+    
+            marker_7c02d95c3636a25de38f8e9aaf6611a5.bindTooltip(
+                `<div>
+                     Potential Solar Farm Location
+                 </div>`,
+                {"sticky": true}
+            );
+        
+    
+            var marker_d14faaba9f9a0c7e45e9815090b5164a = L.marker(
+                [18.86368554137238, 73.28236030993858],
+                {}
+            ).addTo(map_923e02a2996bae00ad614feeefdcf787);
+        
+    
+            var div_icon_68cf2034f8e618fedbcea880a03c34ec = L.divIcon({"className": "solar-icon", "html": "\u003cdiv style=\"font-size: 24px;\"\u003e\u2600\ufe0f\u003c/div\u003e"});
+            marker_d14faaba9f9a0c7e45e9815090b5164a.setIcon(div_icon_68cf2034f8e618fedbcea880a03c34ec);
+        
+    
+            marker_d14faaba9f9a0c7e45e9815090b5164a.bindTooltip(
+                `<div>
+                     Potential Solar Farm Location
+                 </div>`,
+                {"sticky": true}
+            );
+        
+    
+            var marker_20e5ddd3a1f1b4c2492888b770f2f354 = L.marker(
+                [19.353787876843672, 73.27013202510466],
+                {}
+            ).addTo(map_923e02a2996bae00ad614feeefdcf787);
+        
+    
+            var div_icon_2b0676f45cd79e94584ae125286c368f = L.divIcon({"className": "solar-icon", "html": "\u003cdiv style=\"font-size: 24px;\"\u003e\u2600\ufe0f\u003c/div\u003e"});
+            marker_20e5ddd3a1f1b4c2492888b770f2f354.setIcon(div_icon_2b0676f45cd79e94584ae125286c368f);
+        
+    
+            marker_20e5ddd3a1f1b4c2492888b770f2f354.bindTooltip(
+                `<div>
+                     Potential Solar Farm Location
+                 </div>`,
+                {"sticky": true}
+            );
+        
+    
+            var marker_d7ead9f326c6cffffd9158dd996ac02b = L.marker(
+                [19.23134932724768, 72.61676410989419],
+                {}
+            ).addTo(map_923e02a2996bae00ad614feeefdcf787);
+        
+    
+            var div_icon_1bf275ce516904384f97e43406ada74b = L.divIcon({"className": "solar-icon", "html": "\u003cdiv style=\"font-size: 24px;\"\u003e\u2600\ufe0f\u003c/div\u003e"});
+            marker_d7ead9f326c6cffffd9158dd996ac02b.setIcon(div_icon_1bf275ce516904384f97e43406ada74b);
+        
+    
+            marker_d7ead9f326c6cffffd9158dd996ac02b.bindTooltip(
+                `<div>
+                     Potential Solar Farm Location
+                 </div>`,
+                {"sticky": true}
+            );
+        
+    
+            var marker_c0e0626e47049c73392982f45471677d = L.marker(
+                [19.4678181607705, 73.07071267691325],
+                {}
+            ).addTo(map_923e02a2996bae00ad614feeefdcf787);
+        
+    
+            var div_icon_404a61d7dffe8a6b61a51c1bb0800983 = L.divIcon({"className": "solar-icon", "html": "\u003cdiv style=\"font-size: 24px;\"\u003e\u2600\ufe0f\u003c/div\u003e"});
+            marker_c0e0626e47049c73392982f45471677d.setIcon(div_icon_404a61d7dffe8a6b61a51c1bb0800983);
+        
+    
+            marker_c0e0626e47049c73392982f45471677d.bindTooltip(
+                `<div>
+                     Potential Solar Farm Location
+                 </div>`,
+                {"sticky": true}
+            );
+        
+    
+            var marker_d8d6fe01ab38d0ae33416ecafa1f23a0 = L.marker(
+                [18.70797226710604, 73.00546642913177],
+                {}
+            ).addTo(map_923e02a2996bae00ad614feeefdcf787);
+        
+    
+            var div_icon_92c245656bdcefa21479021f32a27049 = L.divIcon({"className": "solar-icon", "html": "\u003cdiv style=\"font-size: 24px;\"\u003e\u2600\ufe0f\u003c/div\u003e"});
+            marker_d8d6fe01ab38d0ae33416ecafa1f23a0.setIcon(div_icon_92c245656bdcefa21479021f32a27049);
+        
+    
+            marker_d8d6fe01ab38d0ae33416ecafa1f23a0.bindTooltip(
+                `<div>
+                     Potential Solar Farm Location
+                 </div>`,
+                {"sticky": true}
+            );
+        
+    
+            var marker_693e87956ef95fe581786e5711cbe568 = L.marker(
+                [18.71674219028855, 72.87642815393312],
+                {}
+            ).addTo(map_923e02a2996bae00ad614feeefdcf787);
+        
+    
+            var div_icon_0768c1d8c0fecd0bc2d1aef6ea9d844c = L.divIcon({"className": "solar-icon", "html": "\u003cdiv style=\"font-size: 24px;\"\u003e\u2600\ufe0f\u003c/div\u003e"});
+            marker_693e87956ef95fe581786e5711cbe568.setIcon(div_icon_0768c1d8c0fecd0bc2d1aef6ea9d844c);
+        
+    
+            marker_693e87956ef95fe581786e5711cbe568.bindTooltip(
+                `<div>
+                     Potential Solar Farm Location
+                 </div>`,
+                {"sticky": true}
+            );
+        
+    
+            var marker_9f19b248cc617855b3cb32496bc574af = L.marker(
+                [19.275416746846464, 73.24228106865466],
+                {}
+            ).addTo(map_923e02a2996bae00ad614feeefdcf787);
+        
+    
+            var div_icon_5439a8f6619b4f1d6d6c07ab179d28b3 = L.divIcon({"className": "solar-icon", "html": "\u003cdiv style=\"font-size: 24px;\"\u003e\u2600\ufe0f\u003c/div\u003e"});
+            marker_9f19b248cc617855b3cb32496bc574af.setIcon(div_icon_5439a8f6619b4f1d6d6c07ab179d28b3);
+        
+    
+            marker_9f19b248cc617855b3cb32496bc574af.bindTooltip(
+                `<div>
+                     Potential Solar Farm Location
+                 </div>`,
+                {"sticky": true}
+            );
+        
+    
+            var marker_7980d0ead51725a3b09fb0751e9b99e7 = L.marker(
+                [19.530847073004328, 72.56777683865553],
+                {}
+            ).addTo(map_923e02a2996bae00ad614feeefdcf787);
+        
+    
+            var div_icon_c98776963ce8c8497053f613fc49525d = L.divIcon({"className": "solar-icon", "html": "\u003cdiv style=\"font-size: 24px;\"\u003e\u2600\ufe0f\u003c/div\u003e"});
+            marker_7980d0ead51725a3b09fb0751e9b99e7.setIcon(div_icon_c98776963ce8c8497053f613fc49525d);
+        
+    
+            marker_7980d0ead51725a3b09fb0751e9b99e7.bindTooltip(
+                `<div>
+                     Potential Solar Farm Location
+                 </div>`,
+                {"sticky": true}
+            );
+        
+    
+            var marker_8e2d59182cf3a65a47a3ebe286f4aabb = L.marker(
+                [19.12592760244058, 72.9486514665894],
+                {}
+            ).addTo(map_923e02a2996bae00ad614feeefdcf787);
+        
+    
+            var div_icon_5c4d9cecc96ca694cc83f7f1959bd66d = L.divIcon({"className": "solar-icon", "html": "\u003cdiv style=\"font-size: 24px;\"\u003e\u2600\ufe0f\u003c/div\u003e"});
+            marker_8e2d59182cf3a65a47a3ebe286f4aabb.setIcon(div_icon_5c4d9cecc96ca694cc83f7f1959bd66d);
+        
+    
+            marker_8e2d59182cf3a65a47a3ebe286f4aabb.bindTooltip(
+                `<div>
+                     Potential Solar Farm Location
+                 </div>`,
+                {"sticky": true}
+            );
+        
+    
+            var marker_8be906bffa38c7fbc042cc47d1a763e1 = L.marker(
+                [18.868446799192974, 72.74177004223561],
+                {}
+            ).addTo(map_923e02a2996bae00ad614feeefdcf787);
+        
+    
+            var div_icon_bcf628ead857f760c348e90769898352 = L.divIcon({"className": "solar-icon", "html": "\u003cdiv style=\"font-size: 24px;\"\u003e\u2600\ufe0f\u003c/div\u003e"});
+            marker_8be906bffa38c7fbc042cc47d1a763e1.setIcon(div_icon_bcf628ead857f760c348e90769898352);
+        
+    
+            marker_8be906bffa38c7fbc042cc47d1a763e1.bindTooltip(
+                `<div>
+                     Potential Solar Farm Location
+                 </div>`,
+                {"sticky": true}
+            );
+        
+    
+            var marker_9d72bd58fecb7832f8f25679ce6867d0 = L.marker(
+                [19.47048074997449, 73.10710027575092],
+                {}
+            ).addTo(map_923e02a2996bae00ad614feeefdcf787);
+        
+    
+            var div_icon_014fe9159108d0818b30b882e227eb2e = L.divIcon({"className": "solar-icon", "html": "\u003cdiv style=\"font-size: 24px;\"\u003e\u2600\ufe0f\u003c/div\u003e"});
+            marker_9d72bd58fecb7832f8f25679ce6867d0.setIcon(div_icon_014fe9159108d0818b30b882e227eb2e);
+        
+    
+            marker_9d72bd58fecb7832f8f25679ce6867d0.bindTooltip(
+                `<div>
+                     Potential Solar Farm Location
+                 </div>`,
+                {"sticky": true}
+            );
+        
+    
+            var marker_1df0f6c8906ea54fc21e241dd0617d31 = L.marker(
+                [18.748625956189045, 72.78929341945391],
+                {}
+            ).addTo(map_923e02a2996bae00ad614feeefdcf787);
+        
+    
+            var div_icon_c3aae40eedc1aa3722ac10f7a80c6c0e = L.divIcon({"className": "solar-icon", "html": "\u003cdiv style=\"font-size: 24px;\"\u003e\u2600\ufe0f\u003c/div\u003e"});
+            marker_1df0f6c8906ea54fc21e241dd0617d31.setIcon(div_icon_c3aae40eedc1aa3722ac10f7a80c6c0e);
+        
+    
+            marker_1df0f6c8906ea54fc21e241dd0617d31.bindTooltip(
+                `<div>
+                     Potential Solar Farm Location
+                 </div>`,
+                {"sticky": true}
+            );
+        
+    
+            var marker_89ad6beb6ecab38e9e9fe7d4aed52741 = L.marker(
+                [19.259351325396885, 72.43478063259741],
+                {}
+            ).addTo(map_923e02a2996bae00ad614feeefdcf787);
+        
+    
+            var div_icon_e719dffec2fb584a2dccdf3c468f9119 = L.divIcon({"className": "solar-icon", "html": "\u003cdiv style=\"font-size: 24px;\"\u003e\u2600\ufe0f\u003c/div\u003e"});
+            marker_89ad6beb6ecab38e9e9fe7d4aed52741.setIcon(div_icon_e719dffec2fb584a2dccdf3c468f9119);
+        
+    
+            marker_89ad6beb6ecab38e9e9fe7d4aed52741.bindTooltip(
+                `<div>
+                     Potential Solar Farm Location
+                 </div>`,
+                {"sticky": true}
+            );
+        
+    
+            var marker_a1d3f1b3f4badcf25c6bc3b1b6a13846 = L.marker(
+                [19.19500536128999, 72.81550173315595],
+                {}
+            ).addTo(map_923e02a2996bae00ad614feeefdcf787);
+        
+    
+            var div_icon_d65546f51d7629d74902506b23e4c11b = L.divIcon({"className": "solar-icon", "html": "\u003cdiv style=\"font-size: 24px;\"\u003e\u2600\ufe0f\u003c/div\u003e"});
+            marker_a1d3f1b3f4badcf25c6bc3b1b6a13846.setIcon(div_icon_d65546f51d7629d74902506b23e4c11b);
+        
+    
+            marker_a1d3f1b3f4badcf25c6bc3b1b6a13846.bindTooltip(
+                `<div>
+                     Potential Solar Farm Location
+                 </div>`,
+                {"sticky": true}
+            );
+        
+    
+            var marker_304d089262f2a98fd37b53a32a404d0f = L.marker(
+                [18.978737520594077, 72.42839435079567],
+                {}
+            ).addTo(map_923e02a2996bae00ad614feeefdcf787);
+        
+    
+            var div_icon_0e8a9edb2df0a99b86ddcf99d58fca76 = L.divIcon({"className": "solar-icon", "html": "\u003cdiv style=\"font-size: 24px;\"\u003e\u2600\ufe0f\u003c/div\u003e"});
+            marker_304d089262f2a98fd37b53a32a404d0f.setIcon(div_icon_0e8a9edb2df0a99b86ddcf99d58fca76);
+        
+    
+            marker_304d089262f2a98fd37b53a32a404d0f.bindTooltip(
+                `<div>
+                     Potential Solar Farm Location
+                 </div>`,
+                {"sticky": true}
+            );
+        
+    
+            var marker_78a48d377996d8a6f342d1dc020bad14 = L.marker(
+                [19.076549723444558, 73.01995593687218],
+                {}
+            ).addTo(map_923e02a2996bae00ad614feeefdcf787);
+        
+    
+            var div_icon_a0e74e87d3b5f30b763855dc49eb2a62 = L.divIcon({"className": "solar-icon", "html": "\u003cdiv style=\"font-size: 24px;\"\u003e\u2600\ufe0f\u003c/div\u003e"});
+            marker_78a48d377996d8a6f342d1dc020bad14.setIcon(div_icon_a0e74e87d3b5f30b763855dc49eb2a62);
+        
+    
+            marker_78a48d377996d8a6f342d1dc020bad14.bindTooltip(
+                `<div>
+                     Potential Solar Farm Location
+                 </div>`,
+                {"sticky": true}
+            );
+        
+    
+            var marker_91ac31d43653bd382e4e61157e5d687c = L.marker(
+                [19.071780429932755, 73.24606755872756],
+                {}
+            ).addTo(map_923e02a2996bae00ad614feeefdcf787);
+        
+    
+            var div_icon_24d29c07a6058450f0fff27c33819a44 = L.divIcon({"className": "solar-icon", "html": "\u003cdiv style=\"font-size: 24px;\"\u003e\u2600\ufe0f\u003c/div\u003e"});
+            marker_91ac31d43653bd382e4e61157e5d687c.setIcon(div_icon_24d29c07a6058450f0fff27c33819a44);
+        
+    
+            marker_91ac31d43653bd382e4e61157e5d687c.bindTooltip(
+                `<div>
+                     Potential Solar Farm Location
+                 </div>`,
+                {"sticky": true}
+            );
+        
+    
+            var marker_5e834922d3ab776ae14df8e49234b72a = L.marker(
+                [18.643913341256482, 72.93895036205186],
+                {}
+            ).addTo(map_923e02a2996bae00ad614feeefdcf787);
+        
+    
+            var div_icon_83d11229945e0330374e8960dc9f14ee = L.divIcon({"className": "solar-icon", "html": "\u003cdiv style=\"font-size: 24px;\"\u003e\u2600\ufe0f\u003c/div\u003e"});
+            marker_5e834922d3ab776ae14df8e49234b72a.setIcon(div_icon_83d11229945e0330374e8960dc9f14ee);
+        
+    
+            marker_5e834922d3ab776ae14df8e49234b72a.bindTooltip(
+                `<div>
+                     Potential Solar Farm Location
+                 </div>`,
+                {"sticky": true}
+            );
+        
+    
+            var marker_ca10c540d36b9fffb60097c13280399d = L.marker(
+                [18.65027655836541, 72.94698595757191],
+                {}
+            ).addTo(map_923e02a2996bae00ad614feeefdcf787);
+        
+    
+            var div_icon_9c962a25df0487c350c9bb5ac4e50da7 = L.divIcon({"className": "solar-icon", "html": "\u003cdiv style=\"font-size: 24px;\"\u003e\u2600\ufe0f\u003c/div\u003e"});
+            marker_ca10c540d36b9fffb60097c13280399d.setIcon(div_icon_9c962a25df0487c350c9bb5ac4e50da7);
+        
+    
+            marker_ca10c540d36b9fffb60097c13280399d.bindTooltip(
+                `<div>
+                     Potential Solar Farm Location
+                 </div>`,
+                {"sticky": true}
+            );
+        
+    
+            var marker_dd07f2b383fc4e530d5c2197fa949d3a = L.marker(
+                [19.052559852510374, 73.20935790530913],
+                {}
+            ).addTo(map_923e02a2996bae00ad614feeefdcf787);
+        
+    
+            var div_icon_1aafd0b8c845997af94881cacd2a9b5f = L.divIcon({"className": "solar-icon", "html": "\u003cdiv style=\"font-size: 24px;\"\u003e\u2600\ufe0f\u003c/div\u003e"});
+            marker_dd07f2b383fc4e530d5c2197fa949d3a.setIcon(div_icon_1aafd0b8c845997af94881cacd2a9b5f);
+        
+    
+            marker_dd07f2b383fc4e530d5c2197fa949d3a.bindTooltip(
+                `<div>
+                     Potential Solar Farm Location
+                 </div>`,
+                {"sticky": true}
+            );
+        
+    
+            var marker_713564b91405170cb6f037c9ca50b3da = L.marker(
+                [19.122595616673145, 72.97338795244337],
+                {}
+            ).addTo(map_923e02a2996bae00ad614feeefdcf787);
+        
+    
+            var div_icon_320213806864275e3a819b1f06ea8c75 = L.divIcon({"className": "solar-icon", "html": "\u003cdiv style=\"font-size: 24px;\"\u003e\u2600\ufe0f\u003c/div\u003e"});
+            marker_713564b91405170cb6f037c9ca50b3da.setIcon(div_icon_320213806864275e3a819b1f06ea8c75);
+        
+    
+            marker_713564b91405170cb6f037c9ca50b3da.bindTooltip(
+                `<div>
+                     Potential Solar Farm Location
+                 </div>`,
+                {"sticky": true}
+            );
+        
+    
+            var marker_bdca122aed9ad69858e880b016dae7c6 = L.marker(
+                [19.368002749506225, 73.08265313419244],
+                {}
+            ).addTo(map_923e02a2996bae00ad614feeefdcf787);
+        
+    
+            var div_icon_5e08ad967663da7a5c3c0351c1d2e972 = L.divIcon({"className": "solar-icon", "html": "\u003cdiv style=\"font-size: 24px;\"\u003e\u2600\ufe0f\u003c/div\u003e"});
+            marker_bdca122aed9ad69858e880b016dae7c6.setIcon(div_icon_5e08ad967663da7a5c3c0351c1d2e972);
+        
+    
+            marker_bdca122aed9ad69858e880b016dae7c6.bindTooltip(
+                `<div>
+                     Potential Solar Farm Location
+                 </div>`,
+                {"sticky": true}
+            );
+        
+    
+            var marker_499985e0744644fc0873d811da546c11 = L.marker(
+                [19.205387592518143, 72.92163850171913],
+                {}
+            ).addTo(map_923e02a2996bae00ad614feeefdcf787);
+        
+    
+            var div_icon_f8b38898a65246748af3c35e45f78871 = L.divIcon({"className": "solar-icon", "html": "\u003cdiv style=\"font-size: 24px;\"\u003e\u2600\ufe0f\u003c/div\u003e"});
+            marker_499985e0744644fc0873d811da546c11.setIcon(div_icon_f8b38898a65246748af3c35e45f78871);
+        
+    
+            marker_499985e0744644fc0873d811da546c11.bindTooltip(
+                `<div>
+                     Potential Solar Farm Location
+                 </div>`,
+                {"sticky": true}
+            );
+        
+    
+            var marker_99cc4a282cd1786638676ee26407024c = L.marker(
+                [19.50958090951082, 72.53350288143912],
+                {}
+            ).addTo(map_923e02a2996bae00ad614feeefdcf787);
+        
+    
+            var div_icon_0c4f77403397a26fcb6c3091b4e8ea0c = L.divIcon({"className": "solar-icon", "html": "\u003cdiv style=\"font-size: 24px;\"\u003e\u2600\ufe0f\u003c/div\u003e"});
+            marker_99cc4a282cd1786638676ee26407024c.setIcon(div_icon_0c4f77403397a26fcb6c3091b4e8ea0c);
+        
+    
+            marker_99cc4a282cd1786638676ee26407024c.bindTooltip(
+                `<div>
+                     Potential Solar Farm Location
+                 </div>`,
+                {"sticky": true}
+            );
+        
+    
+            var marker_1931081d50df8716c6573240d2bc30cb = L.marker(
+                [19.323744225256654, 72.57677493633913],
+                {}
+            ).addTo(map_923e02a2996bae00ad614feeefdcf787);
+        
+    
+            var div_icon_f1c7aabc46b0616a28f588f6148701bd = L.divIcon({"className": "solar-icon", "html": "\u003cdiv style=\"font-size: 24px;\"\u003e\u2600\ufe0f\u003c/div\u003e"});
+            marker_1931081d50df8716c6573240d2bc30cb.setIcon(div_icon_f1c7aabc46b0616a28f588f6148701bd);
+        
+    
+            marker_1931081d50df8716c6573240d2bc30cb.bindTooltip(
+                `<div>
+                     Potential Solar Farm Location
+                 </div>`,
+                {"sticky": true}
+            );
+        
+    
+            var marker_0ff250a170d3a60d1bd55ce977fde06d = L.marker(
+                [19.231156114850545, 72.60679151913581],
+                {}
+            ).addTo(map_923e02a2996bae00ad614feeefdcf787);
+        
+    
+            var div_icon_3bfd3c8e21d64c700949d88beb7e89a5 = L.divIcon({"className": "solar-icon", "html": "\u003cdiv style=\"font-size: 24px;\"\u003e\u2600\ufe0f\u003c/div\u003e"});
+            marker_0ff250a170d3a60d1bd55ce977fde06d.setIcon(div_icon_3bfd3c8e21d64c700949d88beb7e89a5);
+        
+    
+            marker_0ff250a170d3a60d1bd55ce977fde06d.bindTooltip(
+                `<div>
+                     Potential Solar Farm Location
+                 </div>`,
+                {"sticky": true}
+            );
+        
+    
+            var marker_8c6959c07014545a7ec94f8294e40ef5 = L.marker(
+                [19.418510053832023, 72.47044694117663],
+                {}
+            ).addTo(map_923e02a2996bae00ad614feeefdcf787);
+        
+    
+            var div_icon_02553045371043337762980e96e1eec9 = L.divIcon({"className": "solar-icon", "html": "\u003cdiv style=\"font-size: 24px;\"\u003e\u2600\ufe0f\u003c/div\u003e"});
+            marker_8c6959c07014545a7ec94f8294e40ef5.setIcon(div_icon_02553045371043337762980e96e1eec9);
+        
+    
+            marker_8c6959c07014545a7ec94f8294e40ef5.bindTooltip(
+                `<div>
+                     Potential Solar Farm Location
+                 </div>`,
+                {"sticky": true}
+            );
+        
+    
+            var marker_f882c5c5846bb2eca13204797f29e569 = L.marker(
+                [19.098404810694696, 73.12222207323084],
+                {}
+            ).addTo(map_923e02a2996bae00ad614feeefdcf787);
+        
+    
+            var div_icon_b1a21215a09bb8ec07d34219fc5f7b3f = L.divIcon({"className": "solar-icon", "html": "\u003cdiv style=\"font-size: 24px;\"\u003e\u2600\ufe0f\u003c/div\u003e"});
+            marker_f882c5c5846bb2eca13204797f29e569.setIcon(div_icon_b1a21215a09bb8ec07d34219fc5f7b3f);
+        
+    
+            marker_f882c5c5846bb2eca13204797f29e569.bindTooltip(
+                `<div>
+                     Potential Solar Farm Location
+                 </div>`,
+                {"sticky": true}
+            );
+        
+    
+            var marker_4fcde2d8f1f3686e8577caa6d4452318 = L.marker(
+                [19.19382677228176, 72.66805204133105],
+                {}
+            ).addTo(map_923e02a2996bae00ad614feeefdcf787);
+        
+    
+            var div_icon_ac66683637020fcff634bc6f62638ac5 = L.divIcon({"className": "solar-icon", "html": "\u003cdiv style=\"font-size: 24px;\"\u003e\u2600\ufe0f\u003c/div\u003e"});
+            marker_4fcde2d8f1f3686e8577caa6d4452318.setIcon(div_icon_ac66683637020fcff634bc6f62638ac5);
+        
+    
+            marker_4fcde2d8f1f3686e8577caa6d4452318.bindTooltip(
+                `<div>
+                     Potential Solar Farm Location
+                 </div>`,
+                {"sticky": true}
+            );
+        
+    
+            var marker_60b51fa8a64ba5a23fa60651be58b9c4 = L.marker(
+                [18.785011112179575, 73.01612459278634],
+                {}
+            ).addTo(map_923e02a2996bae00ad614feeefdcf787);
+        
+    
+            var div_icon_47a3c211d109e72b33ac1458df09ceef = L.divIcon({"className": "solar-icon", "html": "\u003cdiv style=\"font-size: 24px;\"\u003e\u2600\ufe0f\u003c/div\u003e"});
+            marker_60b51fa8a64ba5a23fa60651be58b9c4.setIcon(div_icon_47a3c211d109e72b33ac1458df09ceef);
+        
+    
+            marker_60b51fa8a64ba5a23fa60651be58b9c4.bindTooltip(
+                `<div>
+                     Potential Solar Farm Location
+                 </div>`,
+                {"sticky": true}
+            );
+        
+    
+            var marker_ed6bdb6e349c80387fb02ee7f839a6a8 = L.marker(
+                [19.091911502041782, 72.41409395256655],
+                {}
+            ).addTo(map_923e02a2996bae00ad614feeefdcf787);
+        
+    
+            var div_icon_99c96fd0d9a6872eab917a38b77132b3 = L.divIcon({"className": "solar-icon", "html": "\u003cdiv style=\"font-size: 24px;\"\u003e\u2600\ufe0f\u003c/div\u003e"});
+            marker_ed6bdb6e349c80387fb02ee7f839a6a8.setIcon(div_icon_99c96fd0d9a6872eab917a38b77132b3);
+        
+    
+            marker_ed6bdb6e349c80387fb02ee7f839a6a8.bindTooltip(
+                `<div>
+                     Potential Solar Farm Location
+                 </div>`,
+                {"sticky": true}
+            );
+        
+    
+            var marker_a811919879b55f8830a21562e03bd2ae = L.marker(
+                [19.131023368751247, 73.34811009840759],
+                {}
+            ).addTo(map_923e02a2996bae00ad614feeefdcf787);
+        
+    
+            var div_icon_d8d35b24c1c83188f562809abd7675b0 = L.divIcon({"className": "solar-icon", "html": "\u003cdiv style=\"font-size: 24px;\"\u003e\u2600\ufe0f\u003c/div\u003e"});
+            marker_a811919879b55f8830a21562e03bd2ae.setIcon(div_icon_d8d35b24c1c83188f562809abd7675b0);
+        
+    
+            marker_a811919879b55f8830a21562e03bd2ae.bindTooltip(
+                `<div>
+                     Potential Solar Farm Location
+                 </div>`,
+                {"sticky": true}
+            );
+        
+    
+            var marker_f7b370111735a7109453d184ba34d837 = L.marker(
+                [19.34921208087995, 73.15608058663211],
+                {}
+            ).addTo(map_923e02a2996bae00ad614feeefdcf787);
+        
+    
+            var div_icon_2b41b3c105aa40aa9bc253b1ea2f6462 = L.divIcon({"className": "solar-icon", "html": "\u003cdiv style=\"font-size: 24px;\"\u003e\u2600\ufe0f\u003c/div\u003e"});
+            marker_f7b370111735a7109453d184ba34d837.setIcon(div_icon_2b41b3c105aa40aa9bc253b1ea2f6462);
+        
+    
+            marker_f7b370111735a7109453d184ba34d837.bindTooltip(
+                `<div>
+                     Potential Solar Farm Location
+                 </div>`,
+                {"sticky": true}
+            );
+        
+    
+            var marker_0a98e6d63826ff3ce2d88b837338ae12 = L.marker(
+                [18.82840416624074, 72.96307907117928],
+                {}
+            ).addTo(map_923e02a2996bae00ad614feeefdcf787);
+        
+    
+            var div_icon_87c8d1a3e89563e5f9ac20587f58d4da = L.divIcon({"className": "solar-icon", "html": "\u003cdiv style=\"font-size: 24px;\"\u003e\u2600\ufe0f\u003c/div\u003e"});
+            marker_0a98e6d63826ff3ce2d88b837338ae12.setIcon(div_icon_87c8d1a3e89563e5f9ac20587f58d4da);
+        
+    
+            marker_0a98e6d63826ff3ce2d88b837338ae12.bindTooltip(
+                `<div>
+                     Potential Solar Farm Location
+                 </div>`,
+                {"sticky": true}
+            );
+        
+    
+            var marker_a9edfbdbb829088af6b71caf5a272111 = L.marker(
+                [19.228278933743756, 72.95468802741983],
+                {}
+            ).addTo(map_923e02a2996bae00ad614feeefdcf787);
+        
+    
+            var div_icon_1971d7b9b997cac6e246c19b36b0e921 = L.divIcon({"className": "solar-icon", "html": "\u003cdiv style=\"font-size: 24px;\"\u003e\u2600\ufe0f\u003c/div\u003e"});
+            marker_a9edfbdbb829088af6b71caf5a272111.setIcon(div_icon_1971d7b9b997cac6e246c19b36b0e921);
+        
+    
+            marker_a9edfbdbb829088af6b71caf5a272111.bindTooltip(
+                `<div>
+                     Potential Solar Farm Location
+                 </div>`,
+                {"sticky": true}
+            );
+        
+    
+            var marker_e693f635897a086bc362122ec5ab30ad = L.marker(
+                [18.997382150765002, 72.88269537359618],
+                {}
+            ).addTo(map_923e02a2996bae00ad614feeefdcf787);
+        
+    
+            var div_icon_89a866b86525da64953a2271ab60bcc1 = L.divIcon({"className": "solar-icon", "html": "\u003cdiv style=\"font-size: 24px;\"\u003e\u2600\ufe0f\u003c/div\u003e"});
+            marker_e693f635897a086bc362122ec5ab30ad.setIcon(div_icon_89a866b86525da64953a2271ab60bcc1);
+        
+    
+            marker_e693f635897a086bc362122ec5ab30ad.bindTooltip(
+                `<div>
+                     Potential Solar Farm Location
+                 </div>`,
+                {"sticky": true}
+            );
+        
+    
+            var marker_a9067a7fd0cda64eb693b850d7e2688b = L.marker(
+                [19.059431254547302, 72.61536619338317],
+                {}
+            ).addTo(map_923e02a2996bae00ad614feeefdcf787);
+        
+    
+            var div_icon_3a8195d82a5869dfdef6acd32dd50f8a = L.divIcon({"className": "solar-icon", "html": "\u003cdiv style=\"font-size: 24px;\"\u003e\u2600\ufe0f\u003c/div\u003e"});
+            marker_a9067a7fd0cda64eb693b850d7e2688b.setIcon(div_icon_3a8195d82a5869dfdef6acd32dd50f8a);
+        
+    
+            marker_a9067a7fd0cda64eb693b850d7e2688b.bindTooltip(
+                `<div>
+                     Potential Solar Farm Location
+                 </div>`,
+                {"sticky": true}
+            );
+        
+    
+            var marker_b5f897f646a9eb8ba2e147092b5ae4e6 = L.marker(
+                [19.260408960479264, 72.60355469809812],
+                {}
+            ).addTo(map_923e02a2996bae00ad614feeefdcf787);
+        
+    
+            var div_icon_a49841e7145697cc6f7868ab45118074 = L.divIcon({"className": "solar-icon", "html": "\u003cdiv style=\"font-size: 24px;\"\u003e\u2600\ufe0f\u003c/div\u003e"});
+            marker_b5f897f646a9eb8ba2e147092b5ae4e6.setIcon(div_icon_a49841e7145697cc6f7868ab45118074);
+        
+    
+            marker_b5f897f646a9eb8ba2e147092b5ae4e6.bindTooltip(
+                `<div>
+                     Potential Solar Farm Location
+                 </div>`,
+                {"sticky": true}
+            );
+        
+    
+            var marker_5c5a04e7a6a0a7173013c246bf695055 = L.marker(
+                [18.652541139293326, 72.49981533875216],
+                {}
+            ).addTo(map_923e02a2996bae00ad614feeefdcf787);
+        
+    
+            var div_icon_f555fa230b08b23398e4170b2c45a15e = L.divIcon({"className": "solar-icon", "html": "\u003cdiv style=\"font-size: 24px;\"\u003e\u2600\ufe0f\u003c/div\u003e"});
+            marker_5c5a04e7a6a0a7173013c246bf695055.setIcon(div_icon_f555fa230b08b23398e4170b2c45a15e);
+        
+    
+            marker_5c5a04e7a6a0a7173013c246bf695055.bindTooltip(
+                `<div>
+                     Potential Solar Farm Location
+                 </div>`,
+                {"sticky": true}
+            );
+        
+    
+            var marker_38c0d048be5cfe3b8f26fc2fdc5d7d57 = L.marker(
+                [19.437614863717986, 72.95340485813436],
+                {}
+            ).addTo(map_923e02a2996bae00ad614feeefdcf787);
+        
+    
+            var div_icon_0f916e0d47850669728451c82c526c37 = L.divIcon({"className": "solar-icon", "html": "\u003cdiv style=\"font-size: 24px;\"\u003e\u2600\ufe0f\u003c/div\u003e"});
+            marker_38c0d048be5cfe3b8f26fc2fdc5d7d57.setIcon(div_icon_0f916e0d47850669728451c82c526c37);
+        
+    
+            marker_38c0d048be5cfe3b8f26fc2fdc5d7d57.bindTooltip(
+                `<div>
+                     Potential Solar Farm Location
+                 </div>`,
+                {"sticky": true}
+            );
+        
+    
+            var marker_7cf3e8b13b08840441e048fc6dcb8760 = L.marker(
+                [19.392262018513087, 73.31702877097425],
+                {}
+            ).addTo(map_923e02a2996bae00ad614feeefdcf787);
+        
+    
+            var div_icon_2e3fda91e20d5642791ba0e5cfcd864b = L.divIcon({"className": "solar-icon", "html": "\u003cdiv style=\"font-size: 24px;\"\u003e\u2600\ufe0f\u003c/div\u003e"});
+            marker_7cf3e8b13b08840441e048fc6dcb8760.setIcon(div_icon_2e3fda91e20d5642791ba0e5cfcd864b);
+        
+    
+            marker_7cf3e8b13b08840441e048fc6dcb8760.bindTooltip(
+                `<div>
+                     Potential Solar Farm Location
+                 </div>`,
+                {"sticky": true}
+            );
+        
+    
+            var marker_4b0e8f143b7fbb55ee99516682d2af48 = L.marker(
+                [19.46308399317544, 72.87347581372683],
+                {}
+            ).addTo(map_923e02a2996bae00ad614feeefdcf787);
+        
+    
+            var div_icon_c43995ad459f6fa0ebf4f24753597d19 = L.divIcon({"className": "solar-icon", "html": "\u003cdiv style=\"font-size: 24px;\"\u003e\u2600\ufe0f\u003c/div\u003e"});
+            marker_4b0e8f143b7fbb55ee99516682d2af48.setIcon(div_icon_c43995ad459f6fa0ebf4f24753597d19);
+        
+    
+            marker_4b0e8f143b7fbb55ee99516682d2af48.bindTooltip(
+                `<div>
+                     Potential Solar Farm Location
+                 </div>`,
+                {"sticky": true}
+            );
+        
+    
+            var marker_7e3463e23801cf18d22bd47137c12339 = L.marker(
+                [19.13993682274808, 73.075377378046],
+                {}
+            ).addTo(map_923e02a2996bae00ad614feeefdcf787);
+        
+    
+            var div_icon_e843ad2f287d8e87b049344dfb6a64e1 = L.divIcon({"className": "solar-icon", "html": "\u003cdiv style=\"font-size: 24px;\"\u003e\u2600\ufe0f\u003c/div\u003e"});
+            marker_7e3463e23801cf18d22bd47137c12339.setIcon(div_icon_e843ad2f287d8e87b049344dfb6a64e1);
+        
+    
+            marker_7e3463e23801cf18d22bd47137c12339.bindTooltip(
+                `<div>
+                     Potential Solar Farm Location
+                 </div>`,
+                {"sticky": true}
+            );
+        
+    
+            var marker_980914de061636b50aec351cfe5e10b8 = L.marker(
+                [19.262772356024264, 72.99126769507654],
+                {}
+            ).addTo(map_923e02a2996bae00ad614feeefdcf787);
+        
+    
+            var div_icon_c4075fdccfe20b8f2bde4348eb30fa04 = L.divIcon({"className": "solar-icon", "html": "\u003cdiv style=\"font-size: 24px;\"\u003e\u2600\ufe0f\u003c/div\u003e"});
+            marker_980914de061636b50aec351cfe5e10b8.setIcon(div_icon_c4075fdccfe20b8f2bde4348eb30fa04);
+        
+    
+            marker_980914de061636b50aec351cfe5e10b8.bindTooltip(
+                `<div>
+                     Potential Solar Farm Location
+                 </div>`,
+                {"sticky": true}
+            );
+        
+    
+            var marker_f8d319358f71599292f4955a114dd296 = L.marker(
+                [19.262881547667856, 72.52474838868994],
+                {}
+            ).addTo(map_923e02a2996bae00ad614feeefdcf787);
+        
+    
+            var div_icon_14e1a5a0c63a2007a060c957c9a9e8ee = L.divIcon({"className": "solar-icon", "html": "\u003cdiv style=\"font-size: 24px;\"\u003e\u2600\ufe0f\u003c/div\u003e"});
+            marker_f8d319358f71599292f4955a114dd296.setIcon(div_icon_14e1a5a0c63a2007a060c957c9a9e8ee);
+        
+    
+            marker_f8d319358f71599292f4955a114dd296.bindTooltip(
+                `<div>
+                     Potential Solar Farm Location
+                 </div>`,
+                {"sticky": true}
+            );
+        
+    
+            var marker_f190b02e87d6f83562d35915df6c0722 = L.marker(
+                [18.912815386803043, 73.273654034071],
+                {}
+            ).addTo(map_923e02a2996bae00ad614feeefdcf787);
+        
+    
+            var div_icon_0f8901ec349b3e7a942e8ff47da58ae8 = L.divIcon({"className": "solar-icon", "html": "\u003cdiv style=\"font-size: 24px;\"\u003e\u2600\ufe0f\u003c/div\u003e"});
+            marker_f190b02e87d6f83562d35915df6c0722.setIcon(div_icon_0f8901ec349b3e7a942e8ff47da58ae8);
+        
+    
+            marker_f190b02e87d6f83562d35915df6c0722.bindTooltip(
+                `<div>
+                     Potential Solar Farm Location
+                 </div>`,
+                {"sticky": true}
+            );
+        
+    
+            var marker_5f44957c7208bb739f2a8a531047e1a0 = L.marker(
+                [18.96173224084785, 72.90449704679139],
+                {}
+            ).addTo(map_923e02a2996bae00ad614feeefdcf787);
+        
+    
+            var div_icon_a4fa02b2fc9071ed3f7a1c57818dbe8c = L.divIcon({"className": "solar-icon", "html": "\u003cdiv style=\"font-size: 24px;\"\u003e\u2600\ufe0f\u003c/div\u003e"});
+            marker_5f44957c7208bb739f2a8a531047e1a0.setIcon(div_icon_a4fa02b2fc9071ed3f7a1c57818dbe8c);
+        
+    
+            marker_5f44957c7208bb739f2a8a531047e1a0.bindTooltip(
+                `<div>
+                     Potential Solar Farm Location
+                 </div>`,
+                {"sticky": true}
+            );
+        
+    
+            var marker_865cbdb10d1b4325800903f5983ebbdf = L.marker(
+                [19.300910482069156, 72.5497742544087],
+                {}
+            ).addTo(map_923e02a2996bae00ad614feeefdcf787);
+        
+    
+            var div_icon_4e72fe655f2f0e815553a632ecde0edf = L.divIcon({"className": "solar-icon", "html": "\u003cdiv style=\"font-size: 24px;\"\u003e\u2600\ufe0f\u003c/div\u003e"});
+            marker_865cbdb10d1b4325800903f5983ebbdf.setIcon(div_icon_4e72fe655f2f0e815553a632ecde0edf);
+        
+    
+            marker_865cbdb10d1b4325800903f5983ebbdf.bindTooltip(
+                `<div>
+                     Potential Solar Farm Location
+                 </div>`,
+                {"sticky": true}
+            );
+        
+    
+            var marker_f08e08eb4d2f26741fb4178e0234a90e = L.marker(
+                [19.021953516551214, 73.35258322062896],
+                {}
+            ).addTo(map_923e02a2996bae00ad614feeefdcf787);
+        
+    
+            var div_icon_f9b3bdd15a8b92396ad4a95e2a4fdf01 = L.divIcon({"className": "solar-icon", "html": "\u003cdiv style=\"font-size: 24px;\"\u003e\u2600\ufe0f\u003c/div\u003e"});
+            marker_f08e08eb4d2f26741fb4178e0234a90e.setIcon(div_icon_f9b3bdd15a8b92396ad4a95e2a4fdf01);
+        
+    
+            marker_f08e08eb4d2f26741fb4178e0234a90e.bindTooltip(
+                `<div>
+                     Potential Solar Farm Location
+                 </div>`,
+                {"sticky": true}
+            );
+        
+    
+            var marker_b41940895f1a01ec19ef0802653230f9 = L.marker(
+                [19.5166221409779, 73.3597310884302],
+                {}
+            ).addTo(map_923e02a2996bae00ad614feeefdcf787);
+        
+    
+            var div_icon_fd652bad4f065b0c13470329e7d01661 = L.divIcon({"className": "solar-icon", "html": "\u003cdiv style=\"font-size: 24px;\"\u003e\u2600\ufe0f\u003c/div\u003e"});
+            marker_b41940895f1a01ec19ef0802653230f9.setIcon(div_icon_fd652bad4f065b0c13470329e7d01661);
+        
+    
+            marker_b41940895f1a01ec19ef0802653230f9.bindTooltip(
+                `<div>
+                     Potential Solar Farm Location
+                 </div>`,
+                {"sticky": true}
+            );
+        
+    
+            var marker_103df786bfac931a2901734e185b7851 = L.marker(
+                [18.980194379910774, 73.05986998095786],
+                {}
+            ).addTo(map_923e02a2996bae00ad614feeefdcf787);
+        
+    
+            var div_icon_d36e19359151633c6462bf03e16deb18 = L.divIcon({"className": "solar-icon", "html": "\u003cdiv style=\"font-size: 24px;\"\u003e\u2600\ufe0f\u003c/div\u003e"});
+            marker_103df786bfac931a2901734e185b7851.setIcon(div_icon_d36e19359151633c6462bf03e16deb18);
+        
+    
+            marker_103df786bfac931a2901734e185b7851.bindTooltip(
+                `<div>
+                     Potential Solar Farm Location
+                 </div>`,
+                {"sticky": true}
+            );
+        
+    
+            var marker_6ebc94fd7cebb6047ff05786b3ae5a95 = L.marker(
+                [19.42760174937531, 72.7024598051901],
+                {}
+            ).addTo(map_923e02a2996bae00ad614feeefdcf787);
+        
+    
+            var div_icon_406437af7d4da00c36cfc0036272269a = L.divIcon({"className": "solar-icon", "html": "\u003cdiv style=\"font-size: 24px;\"\u003e\u2600\ufe0f\u003c/div\u003e"});
+            marker_6ebc94fd7cebb6047ff05786b3ae5a95.setIcon(div_icon_406437af7d4da00c36cfc0036272269a);
+        
+    
+            marker_6ebc94fd7cebb6047ff05786b3ae5a95.bindTooltip(
+                `<div>
+                     Potential Solar Farm Location
+                 </div>`,
+                {"sticky": true}
+            );
+        
+    
+            var marker_63e708c6aaf9ab508e07ada77dee9283 = L.marker(
+                [19.015275631099207, 73.1608126686825],
+                {}
+            ).addTo(map_923e02a2996bae00ad614feeefdcf787);
+        
+    
+            var div_icon_7d6e10d9a4e549474f92efa8733045b3 = L.divIcon({"className": "solar-icon", "html": "\u003cdiv style=\"font-size: 24px;\"\u003e\u2600\ufe0f\u003c/div\u003e"});
+            marker_63e708c6aaf9ab508e07ada77dee9283.setIcon(div_icon_7d6e10d9a4e549474f92efa8733045b3);
+        
+    
+            marker_63e708c6aaf9ab508e07ada77dee9283.bindTooltip(
+                `<div>
+                     Potential Solar Farm Location
+                 </div>`,
+                {"sticky": true}
+            );
+        
+    
+            var marker_223fd220d461ec926f114d86e31fd0df = L.marker(
+                [18.949813617893096, 73.35744159631828],
+                {}
+            ).addTo(map_923e02a2996bae00ad614feeefdcf787);
+        
+    
+            var div_icon_1f7bae7f7e700f3440eb010ed5d4f266 = L.divIcon({"className": "solar-icon", "html": "\u003cdiv style=\"font-size: 24px;\"\u003e\u2600\ufe0f\u003c/div\u003e"});
+            marker_223fd220d461ec926f114d86e31fd0df.setIcon(div_icon_1f7bae7f7e700f3440eb010ed5d4f266);
+        
+    
+            marker_223fd220d461ec926f114d86e31fd0df.bindTooltip(
+                `<div>
+                     Potential Solar Farm Location
+                 </div>`,
+                {"sticky": true}
+            );
+        
+    
+            var marker_eb83643662842df1284265ae5336ede6 = L.marker(
+                [18.674359179820957, 72.60583479644677],
+                {}
+            ).addTo(map_923e02a2996bae00ad614feeefdcf787);
+        
+    
+            var div_icon_1efb2914d54cb37b0db1608d23406cf2 = L.divIcon({"className": "solar-icon", "html": "\u003cdiv style=\"font-size: 24px;\"\u003e\u2600\ufe0f\u003c/div\u003e"});
+            marker_eb83643662842df1284265ae5336ede6.setIcon(div_icon_1efb2914d54cb37b0db1608d23406cf2);
+        
+    
+            marker_eb83643662842df1284265ae5336ede6.bindTooltip(
+                `<div>
+                     Potential Solar Farm Location
+                 </div>`,
+                {"sticky": true}
+            );
+        
+    
+            var marker_efb67e9765e7fb27a3bd06f95aadf34d = L.marker(
+                [19.204035124402935, 72.98473280576087],
+                {}
+            ).addTo(map_923e02a2996bae00ad614feeefdcf787);
+        
+    
+            var div_icon_10b0039fada97862b5c321d204940487 = L.divIcon({"className": "solar-icon", "html": "\u003cdiv style=\"font-size: 24px;\"\u003e\u2600\ufe0f\u003c/div\u003e"});
+            marker_efb67e9765e7fb27a3bd06f95aadf34d.setIcon(div_icon_10b0039fada97862b5c321d204940487);
+        
+    
+            marker_efb67e9765e7fb27a3bd06f95aadf34d.bindTooltip(
+                `<div>
+                     Potential Solar Farm Location
+                 </div>`,
+                {"sticky": true}
+            );
+        
+    
+            var marker_e51d9eae208c0527b93d3a9de2cf19ce = L.marker(
+                [19.01388766126297, 72.50857451874552],
+                {}
+            ).addTo(map_923e02a2996bae00ad614feeefdcf787);
+        
+    
+            var div_icon_ce9db8b5ce19cac109757a570feb9e19 = L.divIcon({"className": "solar-icon", "html": "\u003cdiv style=\"font-size: 24px;\"\u003e\u2600\ufe0f\u003c/div\u003e"});
+            marker_e51d9eae208c0527b93d3a9de2cf19ce.setIcon(div_icon_ce9db8b5ce19cac109757a570feb9e19);
+        
+    
+            marker_e51d9eae208c0527b93d3a9de2cf19ce.bindTooltip(
+                `<div>
+                     Potential Solar Farm Location
+                 </div>`,
+                {"sticky": true}
+            );
+        
+    
+            var marker_1d716ba35bab58f5c0075b6f2f2b2d73 = L.marker(
+                [18.901988772328405, 72.66868467823592],
+                {}
+            ).addTo(map_923e02a2996bae00ad614feeefdcf787);
+        
+    
+            var div_icon_76cdbf7e59d5cc880b27468c3f0b0eee = L.divIcon({"className": "solar-icon", "html": "\u003cdiv style=\"font-size: 24px;\"\u003e\u2600\ufe0f\u003c/div\u003e"});
+            marker_1d716ba35bab58f5c0075b6f2f2b2d73.setIcon(div_icon_76cdbf7e59d5cc880b27468c3f0b0eee);
+        
+    
+            marker_1d716ba35bab58f5c0075b6f2f2b2d73.bindTooltip(
+                `<div>
+                     Potential Solar Farm Location
+                 </div>`,
+                {"sticky": true}
+            );
+        
+    
+            var marker_a4a90fbc91d586e55acb988f9e2ff226 = L.marker(
+                [19.28323767601801, 73.25911262726032],
+                {}
+            ).addTo(map_923e02a2996bae00ad614feeefdcf787);
+        
+    
+            var div_icon_8ef1ad579ffa93b19b723b122c9d8924 = L.divIcon({"className": "solar-icon", "html": "\u003cdiv style=\"font-size: 24px;\"\u003e\u2600\ufe0f\u003c/div\u003e"});
+            marker_a4a90fbc91d586e55acb988f9e2ff226.setIcon(div_icon_8ef1ad579ffa93b19b723b122c9d8924);
+        
+    
+            marker_a4a90fbc91d586e55acb988f9e2ff226.bindTooltip(
+                `<div>
+                     Potential Solar Farm Location
+                 </div>`,
+                {"sticky": true}
+            );
+        
+    
+            var marker_742f832772d53c70480c278ee7f37399 = L.marker(
+                [19.121990640535568, 72.66779414218726],
+                {}
+            ).addTo(map_923e02a2996bae00ad614feeefdcf787);
+        
+    
+            var div_icon_f37ff1d337bea6dd61b6a3d180aa839c = L.divIcon({"className": "solar-icon", "html": "\u003cdiv style=\"font-size: 24px;\"\u003e\u2600\ufe0f\u003c/div\u003e"});
+            marker_742f832772d53c70480c278ee7f37399.setIcon(div_icon_f37ff1d337bea6dd61b6a3d180aa839c);
+        
+    
+            marker_742f832772d53c70480c278ee7f37399.bindTooltip(
+                `<div>
+                     Potential Solar Farm Location
+                 </div>`,
+                {"sticky": true}
+            );
+        
+    
+            var marker_4a8aad170955efaaede9aac08f9fa84d = L.marker(
+                [19.384465794847102, 73.03564117324493],
+                {}
+            ).addTo(map_923e02a2996bae00ad614feeefdcf787);
+        
+    
+            var div_icon_4eac6bbcfafdfb0b5ac8c440a692c7cc = L.divIcon({"className": "solar-icon", "html": "\u003cdiv style=\"font-size: 24px;\"\u003e\u2600\ufe0f\u003c/div\u003e"});
+            marker_4a8aad170955efaaede9aac08f9fa84d.setIcon(div_icon_4eac6bbcfafdfb0b5ac8c440a692c7cc);
+        
+    
+            marker_4a8aad170955efaaede9aac08f9fa84d.bindTooltip(
+                `<div>
+                     Potential Solar Farm Location
+                 </div>`,
+                {"sticky": true}
+            );
+        
+    
+            var marker_2eee071f39644d26bf1f23c5671b1a9a = L.marker(
+                [18.743218440399325, 73.3478869334942],
+                {}
+            ).addTo(map_923e02a2996bae00ad614feeefdcf787);
+        
+    
+            var div_icon_1ac4b72743850a81788425d7bd1e885e = L.divIcon({"className": "solar-icon", "html": "\u003cdiv style=\"font-size: 24px;\"\u003e\u2600\ufe0f\u003c/div\u003e"});
+            marker_2eee071f39644d26bf1f23c5671b1a9a.setIcon(div_icon_1ac4b72743850a81788425d7bd1e885e);
+        
+    
+            marker_2eee071f39644d26bf1f23c5671b1a9a.bindTooltip(
+                `<div>
+                     Potential Solar Farm Location
+                 </div>`,
+                {"sticky": true}
+            );
+        
+    
+            var marker_2fa5ed836e9381cd7e3d2f18b3318ec2 = L.marker(
+                [18.634696818611165, 72.87747440689317],
+                {}
+            ).addTo(map_923e02a2996bae00ad614feeefdcf787);
+        
+    
+            var div_icon_738a58244e1768b7c2008db25d8d345c = L.divIcon({"className": "solar-icon", "html": "\u003cdiv style=\"font-size: 24px;\"\u003e\u2600\ufe0f\u003c/div\u003e"});
+            marker_2fa5ed836e9381cd7e3d2f18b3318ec2.setIcon(div_icon_738a58244e1768b7c2008db25d8d345c);
+        
+    
+            marker_2fa5ed836e9381cd7e3d2f18b3318ec2.bindTooltip(
+                `<div>
+                     Potential Solar Farm Location
+                 </div>`,
+                {"sticky": true}
+            );
+        
+    
+            var marker_b3610c86823e023c241273f218aa52f9 = L.marker(
+                [18.993566241373664, 72.85248569956688],
+                {}
+            ).addTo(map_923e02a2996bae00ad614feeefdcf787);
+        
+    
+            var div_icon_d70c5dd49352df7a79c8f6109b98d16a = L.divIcon({"className": "solar-icon", "html": "\u003cdiv style=\"font-size: 24px;\"\u003e\u2600\ufe0f\u003c/div\u003e"});
+            marker_b3610c86823e023c241273f218aa52f9.setIcon(div_icon_d70c5dd49352df7a79c8f6109b98d16a);
+        
+    
+            marker_b3610c86823e023c241273f218aa52f9.bindTooltip(
+                `<div>
+                     Potential Solar Farm Location
+                 </div>`,
+                {"sticky": true}
+            );
+        
+    
+            var marker_ae042709211c2ddc0793eb458df9a6c6 = L.marker(
+                [18.764359426298917, 72.81255864259109],
+                {}
+            ).addTo(map_923e02a2996bae00ad614feeefdcf787);
+        
+    
+            var div_icon_d5d5b6dafb981ccf3f2f98ec4dd20ef1 = L.divIcon({"className": "solar-icon", "html": "\u003cdiv style=\"font-size: 24px;\"\u003e\u2600\ufe0f\u003c/div\u003e"});
+            marker_ae042709211c2ddc0793eb458df9a6c6.setIcon(div_icon_d5d5b6dafb981ccf3f2f98ec4dd20ef1);
+        
+    
+            marker_ae042709211c2ddc0793eb458df9a6c6.bindTooltip(
+                `<div>
+                     Potential Solar Farm Location
+                 </div>`,
+                {"sticky": true}
+            );
+        
+    
+            var marker_4b8238a3ea9bdacbec3c3e0e3ed0a2ea = L.marker(
+                [19.263883791108427, 72.53573728277004],
+                {}
+            ).addTo(map_923e02a2996bae00ad614feeefdcf787);
+        
+    
+            var div_icon_7b2a5a0832e723add5648e0afcbf5194 = L.divIcon({"className": "solar-icon", "html": "\u003cdiv style=\"font-size: 24px;\"\u003e\u2600\ufe0f\u003c/div\u003e"});
+            marker_4b8238a3ea9bdacbec3c3e0e3ed0a2ea.setIcon(div_icon_7b2a5a0832e723add5648e0afcbf5194);
+        
+    
+            marker_4b8238a3ea9bdacbec3c3e0e3ed0a2ea.bindTooltip(
+                `<div>
+                     Potential Solar Farm Location
+                 </div>`,
+                {"sticky": true}
+            );
+        
+    
+            var marker_6eccc30e0e2c75ad66a883588a77bb9b = L.marker(
+                [19.434695418758363, 72.95731674081601],
+                {}
+            ).addTo(map_923e02a2996bae00ad614feeefdcf787);
+        
+    
+            var div_icon_49cc186680619da8b12a716a13c5b90a = L.divIcon({"className": "solar-icon", "html": "\u003cdiv style=\"font-size: 24px;\"\u003e\u2600\ufe0f\u003c/div\u003e"});
+            marker_6eccc30e0e2c75ad66a883588a77bb9b.setIcon(div_icon_49cc186680619da8b12a716a13c5b90a);
+        
+    
+            marker_6eccc30e0e2c75ad66a883588a77bb9b.bindTooltip(
+                `<div>
+                     Potential Solar Farm Location
+                 </div>`,
+                {"sticky": true}
+            );
+        
+    
+            var marker_0ab59c845d3f0e68c24edf44097c6b42 = L.marker(
+                [19.373609222855514, 72.48192662895919],
+                {}
+            ).addTo(map_923e02a2996bae00ad614feeefdcf787);
+        
+    
+            var div_icon_41e16906207025de401f73bbd8c2c0ea = L.divIcon({"className": "solar-icon", "html": "\u003cdiv style=\"font-size: 24px;\"\u003e\u2600\ufe0f\u003c/div\u003e"});
+            marker_0ab59c845d3f0e68c24edf44097c6b42.setIcon(div_icon_41e16906207025de401f73bbd8c2c0ea);
+        
+    
+            marker_0ab59c845d3f0e68c24edf44097c6b42.bindTooltip(
+                `<div>
+                     Potential Solar Farm Location
+                 </div>`,
+                {"sticky": true}
+            );
+        
+    
+            var marker_2fdd6a743f6bb88adbeec9ebd0c59a12 = L.marker(
+                [19.053327025714594, 73.00222804403361],
+                {}
+            ).addTo(map_923e02a2996bae00ad614feeefdcf787);
+        
+    
+            var div_icon_1385c057e29ea0e6ef476f87c29cb1fc = L.divIcon({"className": "solar-icon", "html": "\u003cdiv style=\"font-size: 24px;\"\u003e\u2600\ufe0f\u003c/div\u003e"});
+            marker_2fdd6a743f6bb88adbeec9ebd0c59a12.setIcon(div_icon_1385c057e29ea0e6ef476f87c29cb1fc);
+        
+    
+            marker_2fdd6a743f6bb88adbeec9ebd0c59a12.bindTooltip(
+                `<div>
+                     Potential Solar Farm Location
+                 </div>`,
+                {"sticky": true}
+            );
+        
+    
+            var marker_60bf2b58b05989f460ff85f841f3d4ac = L.marker(
+                [18.679718979651927, 72.4607707963575],
+                {}
+            ).addTo(map_923e02a2996bae00ad614feeefdcf787);
+        
+    
+            var div_icon_32f444e5e942ec080e7e795b82f75ff4 = L.divIcon({"className": "solar-icon", "html": "\u003cdiv style=\"font-size: 24px;\"\u003e\u2600\ufe0f\u003c/div\u003e"});
+            marker_60bf2b58b05989f460ff85f841f3d4ac.setIcon(div_icon_32f444e5e942ec080e7e795b82f75ff4);
+        
+    
+            marker_60bf2b58b05989f460ff85f841f3d4ac.bindTooltip(
+                `<div>
+                     Potential Solar Farm Location
+                 </div>`,
+                {"sticky": true}
+            );
+        
+    
+            var marker_601fca670d1ccba20bc99eeab5028259 = L.marker(
+                [19.356319838867137, 72.52459250974674],
+                {}
+            ).addTo(map_923e02a2996bae00ad614feeefdcf787);
+        
+    
+            var div_icon_20bff54c0f234896c8d62aaf7173f96c = L.divIcon({"className": "solar-icon", "html": "\u003cdiv style=\"font-size: 24px;\"\u003e\u2600\ufe0f\u003c/div\u003e"});
+            marker_601fca670d1ccba20bc99eeab5028259.setIcon(div_icon_20bff54c0f234896c8d62aaf7173f96c);
+        
+    
+            marker_601fca670d1ccba20bc99eeab5028259.bindTooltip(
+                `<div>
+                     Potential Solar Farm Location
+                 </div>`,
+                {"sticky": true}
+            );
+        
+    
+            var marker_9f0dc5dd53e5de5fbde7d7b2983433aa = L.marker(
+                [19.520779638309637, 72.72165723713584],
+                {}
+            ).addTo(map_923e02a2996bae00ad614feeefdcf787);
+        
+    
+            var div_icon_2af312252ac6006d81f487002be0c798 = L.divIcon({"className": "solar-icon", "html": "\u003cdiv style=\"font-size: 24px;\"\u003e\u2600\ufe0f\u003c/div\u003e"});
+            marker_9f0dc5dd53e5de5fbde7d7b2983433aa.setIcon(div_icon_2af312252ac6006d81f487002be0c798);
+        
+    
+            marker_9f0dc5dd53e5de5fbde7d7b2983433aa.bindTooltip(
+                `<div>
+                     Potential Solar Farm Location
+                 </div>`,
+                {"sticky": true}
+            );
+        
+    
+            var marker_07f9763a6f8d8a5d19cae394e893d2f2 = L.marker(
+                [18.75386867739485, 72.53523216962894],
+                {}
+            ).addTo(map_923e02a2996bae00ad614feeefdcf787);
+        
+    
+            var div_icon_447a8c69ab4adfa3e7535f490d611e8c = L.divIcon({"className": "solar-icon", "html": "\u003cdiv style=\"font-size: 24px;\"\u003e\u2600\ufe0f\u003c/div\u003e"});
+            marker_07f9763a6f8d8a5d19cae394e893d2f2.setIcon(div_icon_447a8c69ab4adfa3e7535f490d611e8c);
+        
+    
+            marker_07f9763a6f8d8a5d19cae394e893d2f2.bindTooltip(
+                `<div>
+                     Potential Solar Farm Location
+                 </div>`,
+                {"sticky": true}
+            );
+        
+    
+            var marker_14b3d6070a0b9a97eed9c05e1b8c1d5f = L.marker(
+                [18.985804058895358, 72.70989609417556],
+                {}
+            ).addTo(map_923e02a2996bae00ad614feeefdcf787);
+        
+    
+            var div_icon_3386c6d0e3e2111d0f6b9b63e0de48cd = L.divIcon({"className": "solar-icon", "html": "\u003cdiv style=\"font-size: 24px;\"\u003e\u2600\ufe0f\u003c/div\u003e"});
+            marker_14b3d6070a0b9a97eed9c05e1b8c1d5f.setIcon(div_icon_3386c6d0e3e2111d0f6b9b63e0de48cd);
+        
+    
+            marker_14b3d6070a0b9a97eed9c05e1b8c1d5f.bindTooltip(
+                `<div>
+                     Potential Solar Farm Location
+                 </div>`,
+                {"sticky": true}
+            );
+        
+    
+            var marker_9c1ee72e02cfafff5726305ed41ff975 = L.marker(
+                [19.045333182976787, 72.79090831356804],
+                {}
+            ).addTo(map_923e02a2996bae00ad614feeefdcf787);
+        
+    
+            var div_icon_0a1e2891ade6f5e93caccd061ca38da5 = L.divIcon({"className": "solar-icon", "html": "\u003cdiv style=\"font-size: 24px;\"\u003e\u2600\ufe0f\u003c/div\u003e"});
+            marker_9c1ee72e02cfafff5726305ed41ff975.setIcon(div_icon_0a1e2891ade6f5e93caccd061ca38da5);
+        
+    
+            marker_9c1ee72e02cfafff5726305ed41ff975.bindTooltip(
+                `<div>
+                     Potential Solar Farm Location
+                 </div>`,
+                {"sticky": true}
+            );
+        
+    
+            var marker_41f6f81c76483b2d1856af5a505d2ad2 = L.marker(
+                [19.10196193778068, 73.21546135444656],
+                {}
+            ).addTo(map_923e02a2996bae00ad614feeefdcf787);
+        
+    
+            var div_icon_8338e4cb9b5989a142c689c81616be28 = L.divIcon({"className": "solar-icon", "html": "\u003cdiv style=\"font-size: 24px;\"\u003e\u2600\ufe0f\u003c/div\u003e"});
+            marker_41f6f81c76483b2d1856af5a505d2ad2.setIcon(div_icon_8338e4cb9b5989a142c689c81616be28);
+        
+    
+            marker_41f6f81c76483b2d1856af5a505d2ad2.bindTooltip(
+                `<div>
+                     Potential Solar Farm Location
+                 </div>`,
+                {"sticky": true}
+            );
+        
+    
+            var marker_d7c7bd579d11c858d3bd6e8620467638 = L.marker(
+                [18.85273616978228, 72.59093470678147],
+                {}
+            ).addTo(map_923e02a2996bae00ad614feeefdcf787);
+        
+    
+            var div_icon_36b69f87ef306cc8f458133dbf111925 = L.divIcon({"className": "solar-icon", "html": "\u003cdiv style=\"font-size: 24px;\"\u003e\u2600\ufe0f\u003c/div\u003e"});
+            marker_d7c7bd579d11c858d3bd6e8620467638.setIcon(div_icon_36b69f87ef306cc8f458133dbf111925);
+        
+    
+            marker_d7c7bd579d11c858d3bd6e8620467638.bindTooltip(
+                `<div>
+                     Potential Solar Farm Location
+                 </div>`,
+                {"sticky": true}
+            );
+        
+    
+            var marker_54d5a656ee669315463ae28b454d14bb = L.marker(
+                [18.922664790111323, 72.81084163270576],
+                {}
+            ).addTo(map_923e02a2996bae00ad614feeefdcf787);
+        
+    
+            var div_icon_be82c78b52cd2d8d713d23965f17faba = L.divIcon({"className": "solar-icon", "html": "\u003cdiv style=\"font-size: 24px;\"\u003e\u2600\ufe0f\u003c/div\u003e"});
+            marker_54d5a656ee669315463ae28b454d14bb.setIcon(div_icon_be82c78b52cd2d8d713d23965f17faba);
+        
+    
+            marker_54d5a656ee669315463ae28b454d14bb.bindTooltip(
+                `<div>
+                     Potential Solar Farm Location
+                 </div>`,
+                {"sticky": true}
+            );
+        
+    
+            var marker_5b0276ccebaf6394072a5f20943c794f = L.marker(
+                [18.83532780774346, 72.78190328552824],
+                {}
+            ).addTo(map_923e02a2996bae00ad614feeefdcf787);
+        
+    
+            var div_icon_5d2530c9a57ae9d59cd2814a0c7abb64 = L.divIcon({"className": "solar-icon", "html": "\u003cdiv style=\"font-size: 24px;\"\u003e\u2600\ufe0f\u003c/div\u003e"});
+            marker_5b0276ccebaf6394072a5f20943c794f.setIcon(div_icon_5d2530c9a57ae9d59cd2814a0c7abb64);
+        
+    
+            marker_5b0276ccebaf6394072a5f20943c794f.bindTooltip(
+                `<div>
+                     Potential Solar Farm Location
+                 </div>`,
+                {"sticky": true}
+            );
+        
+    
+            var marker_d407cf5490c476cef5cff1c7f6f59058 = L.marker(
+                [19.071698738380235, 73.29273792958891],
+                {}
+            ).addTo(map_923e02a2996bae00ad614feeefdcf787);
+        
+    
+            var div_icon_58eb4f51bf91a48a7af4363d3bca763c = L.divIcon({"className": "solar-icon", "html": "\u003cdiv style=\"font-size: 24px;\"\u003e\u2600\ufe0f\u003c/div\u003e"});
+            marker_d407cf5490c476cef5cff1c7f6f59058.setIcon(div_icon_58eb4f51bf91a48a7af4363d3bca763c);
+        
+    
+            marker_d407cf5490c476cef5cff1c7f6f59058.bindTooltip(
+                `<div>
+                     Potential Solar Farm Location
+                 </div>`,
+                {"sticky": true}
+            );
+        
+    
+            var marker_4e4bea490c67355db815b9945e83294f = L.marker(
+                [19.493102120979493, 73.24491238177227],
+                {}
+            ).addTo(map_923e02a2996bae00ad614feeefdcf787);
+        
+    
+            var div_icon_e1178273e10a78e8086752db7218692d = L.divIcon({"className": "solar-icon", "html": "\u003cdiv style=\"font-size: 24px;\"\u003e\u2600\ufe0f\u003c/div\u003e"});
+            marker_4e4bea490c67355db815b9945e83294f.setIcon(div_icon_e1178273e10a78e8086752db7218692d);
+        
+    
+            marker_4e4bea490c67355db815b9945e83294f.bindTooltip(
+                `<div>
+                     Potential Solar Farm Location
+                 </div>`,
+                {"sticky": true}
+            );
+        
+    
+            var marker_c84f22c7ab7f8e98532a5accf66dfb55 = L.marker(
+                [18.756647865844144, 73.10285356360511],
+                {}
+            ).addTo(map_923e02a2996bae00ad614feeefdcf787);
+        
+    
+            var div_icon_9df135784a65b72e0437ebbbcb241a5f = L.divIcon({"className": "solar-icon", "html": "\u003cdiv style=\"font-size: 24px;\"\u003e\u2600\ufe0f\u003c/div\u003e"});
+            marker_c84f22c7ab7f8e98532a5accf66dfb55.setIcon(div_icon_9df135784a65b72e0437ebbbcb241a5f);
+        
+    
+            marker_c84f22c7ab7f8e98532a5accf66dfb55.bindTooltip(
+                `<div>
+                     Potential Solar Farm Location
+                 </div>`,
+                {"sticky": true}
+            );
+        
+    
+            var marker_72ecce1952138b1df7602ae9c458e5fa = L.marker(
+                [19.154431816470375, 73.21043639427342],
+                {}
+            ).addTo(map_923e02a2996bae00ad614feeefdcf787);
+        
+    
+            var div_icon_18efa44009956c13bb2b6b909f1864bd = L.divIcon({"className": "solar-icon", "html": "\u003cdiv style=\"font-size: 24px;\"\u003e\u2600\ufe0f\u003c/div\u003e"});
+            marker_72ecce1952138b1df7602ae9c458e5fa.setIcon(div_icon_18efa44009956c13bb2b6b909f1864bd);
+        
+    
+            marker_72ecce1952138b1df7602ae9c458e5fa.bindTooltip(
+                `<div>
+                     Potential Solar Farm Location
+                 </div>`,
+                {"sticky": true}
+            );
+        
+    
+            var marker_ba5603db626897f2edd74ca192cd7edd = L.marker(
+                [19.011770435947316, 73.13322443708023],
+                {}
+            ).addTo(map_923e02a2996bae00ad614feeefdcf787);
+        
+    
+            var div_icon_c446a1650ea230e86373d31bdf413a35 = L.divIcon({"className": "solar-icon", "html": "\u003cdiv style=\"font-size: 24px;\"\u003e\u2600\ufe0f\u003c/div\u003e"});
+            marker_ba5603db626897f2edd74ca192cd7edd.setIcon(div_icon_c446a1650ea230e86373d31bdf413a35);
+        
+    
+            marker_ba5603db626897f2edd74ca192cd7edd.bindTooltip(
+                `<div>
+                     Potential Solar Farm Location
+                 </div>`,
+                {"sticky": true}
+            );
+        
+    
+            var marker_d51f4ef3968a15f0ccafea69cf327fa8 = L.marker(
+                [19.157001329310447, 72.55668290423989],
+                {}
+            ).addTo(map_923e02a2996bae00ad614feeefdcf787);
+        
+    
+            var div_icon_f429fb0d2a144decb4c0aa882402d377 = L.divIcon({"className": "solar-icon", "html": "\u003cdiv style=\"font-size: 24px;\"\u003e\u2600\ufe0f\u003c/div\u003e"});
+            marker_d51f4ef3968a15f0ccafea69cf327fa8.setIcon(div_icon_f429fb0d2a144decb4c0aa882402d377);
+        
+    
+            marker_d51f4ef3968a15f0ccafea69cf327fa8.bindTooltip(
+                `<div>
+                     Potential Solar Farm Location
+                 </div>`,
+                {"sticky": true}
+            );
+        
+    
+            var marker_5a24b71adfc9bf8ff5356984bd89e638 = L.marker(
+                [19.237106828208482, 73.04463697160752],
+                {}
+            ).addTo(map_923e02a2996bae00ad614feeefdcf787);
+        
+    
+            var div_icon_e7aeefa62f2aec3e577615d635887a04 = L.divIcon({"className": "solar-icon", "html": "\u003cdiv style=\"font-size: 24px;\"\u003e\u2600\ufe0f\u003c/div\u003e"});
+            marker_5a24b71adfc9bf8ff5356984bd89e638.setIcon(div_icon_e7aeefa62f2aec3e577615d635887a04);
+        
+    
+            marker_5a24b71adfc9bf8ff5356984bd89e638.bindTooltip(
+                `<div>
+                     Potential Solar Farm Location
+                 </div>`,
+                {"sticky": true}
+            );
+        
+    
+            var marker_1f9b7581e75bd0596388ce0c5cc71da6 = L.marker(
+                [19.038629729365038, 73.18458571736403],
+                {}
+            ).addTo(map_923e02a2996bae00ad614feeefdcf787);
+        
+    
+            var div_icon_a0c7aed2b599fd699a9e01fd54037b3f = L.divIcon({"className": "solar-icon", "html": "\u003cdiv style=\"font-size: 24px;\"\u003e\u2600\ufe0f\u003c/div\u003e"});
+            marker_1f9b7581e75bd0596388ce0c5cc71da6.setIcon(div_icon_a0c7aed2b599fd699a9e01fd54037b3f);
+        
+    
+            marker_1f9b7581e75bd0596388ce0c5cc71da6.bindTooltip(
+                `<div>
+                     Potential Solar Farm Location
+                 </div>`,
+                {"sticky": true}
+            );
+        
+    
+            var marker_c9899d5f0b802fe72f9d044f26684014 = L.marker(
+                [19.10220017793454, 73.2737507876506],
+                {}
+            ).addTo(map_923e02a2996bae00ad614feeefdcf787);
+        
+    
+            var div_icon_a8cc505d97b347aa1b34c6fb07aa08c2 = L.divIcon({"className": "solar-icon", "html": "\u003cdiv style=\"font-size: 24px;\"\u003e\u2600\ufe0f\u003c/div\u003e"});
+            marker_c9899d5f0b802fe72f9d044f26684014.setIcon(div_icon_a8cc505d97b347aa1b34c6fb07aa08c2);
+        
+    
+            marker_c9899d5f0b802fe72f9d044f26684014.bindTooltip(
+                `<div>
+                     Potential Solar Farm Location
+                 </div>`,
+                {"sticky": true}
+            );
+        
+    
+            var marker_1ef53ce1947f2026bedfd2df6d070704 = L.marker(
+                [19.072336516545334, 72.57118641575576],
+                {}
+            ).addTo(map_923e02a2996bae00ad614feeefdcf787);
+        
+    
+            var div_icon_b5e432c849bee12845f61096ab41b7af = L.divIcon({"className": "solar-icon", "html": "\u003cdiv style=\"font-size: 24px;\"\u003e\u2600\ufe0f\u003c/div\u003e"});
+            marker_1ef53ce1947f2026bedfd2df6d070704.setIcon(div_icon_b5e432c849bee12845f61096ab41b7af);
+        
+    
+            marker_1ef53ce1947f2026bedfd2df6d070704.bindTooltip(
+                `<div>
+                     Potential Solar Farm Location
+                 </div>`,
+                {"sticky": true}
+            );
+        
+    
+            var marker_2b2fe57d3e7174fd4e7931c5ba217e1d = L.marker(
+                [18.801280977028764, 73.31573523463683],
+                {}
+            ).addTo(map_923e02a2996bae00ad614feeefdcf787);
+        
+    
+            var div_icon_ebbc87989d5a3a8dceb51677407596df = L.divIcon({"className": "solar-icon", "html": "\u003cdiv style=\"font-size: 24px;\"\u003e\u2600\ufe0f\u003c/div\u003e"});
+            marker_2b2fe57d3e7174fd4e7931c5ba217e1d.setIcon(div_icon_ebbc87989d5a3a8dceb51677407596df);
+        
+    
+            marker_2b2fe57d3e7174fd4e7931c5ba217e1d.bindTooltip(
+                `<div>
+                     Potential Solar Farm Location
+                 </div>`,
+                {"sticky": true}
+            );
+        
+    
+            var marker_3aa7c0f75fe23a24bf94737705bbfaef = L.marker(
+                [19.454862134905724, 73.2576307670358],
+                {}
+            ).addTo(map_923e02a2996bae00ad614feeefdcf787);
+        
+    
+            var div_icon_b4d23e17aed2f19cc39d61265b537431 = L.divIcon({"className": "solar-icon", "html": "\u003cdiv style=\"font-size: 24px;\"\u003e\u2600\ufe0f\u003c/div\u003e"});
+            marker_3aa7c0f75fe23a24bf94737705bbfaef.setIcon(div_icon_b4d23e17aed2f19cc39d61265b537431);
+        
+    
+            marker_3aa7c0f75fe23a24bf94737705bbfaef.bindTooltip(
+                `<div>
+                     Potential Solar Farm Location
+                 </div>`,
+                {"sticky": true}
+            );
+        
+    
+            var marker_fd645a43e6f1efb59be7ef5803488b5b = L.marker(
+                [19.477035922059233, 73.07609821603928],
+                {}
+            ).addTo(map_923e02a2996bae00ad614feeefdcf787);
+        
+    
+            var div_icon_a3296d61196142be985598f8db39c70f = L.divIcon({"className": "solar-icon", "html": "\u003cdiv style=\"font-size: 24px;\"\u003e\u2600\ufe0f\u003c/div\u003e"});
+            marker_fd645a43e6f1efb59be7ef5803488b5b.setIcon(div_icon_a3296d61196142be985598f8db39c70f);
+        
+    
+            marker_fd645a43e6f1efb59be7ef5803488b5b.bindTooltip(
+                `<div>
+                     Potential Solar Farm Location
+                 </div>`,
+                {"sticky": true}
+            );
+        
+    
+            var marker_06f20b0ba373ba2979a7d127612493db = L.marker(
+                [19.28142865780419, 73.27323099979029],
+                {}
+            ).addTo(map_923e02a2996bae00ad614feeefdcf787);
+        
+    
+            var div_icon_e5f01ff94da6c800d30ad35c0edf7336 = L.divIcon({"className": "solar-icon", "html": "\u003cdiv style=\"font-size: 24px;\"\u003e\u2600\ufe0f\u003c/div\u003e"});
+            marker_06f20b0ba373ba2979a7d127612493db.setIcon(div_icon_e5f01ff94da6c800d30ad35c0edf7336);
+        
+    
+            marker_06f20b0ba373ba2979a7d127612493db.bindTooltip(
+                `<div>
+                     Potential Solar Farm Location
+                 </div>`,
+                {"sticky": true}
+            );
+        
+    
+            var marker_f8ab4b2b2f0071a0475b737814eac545 = L.marker(
+                [18.897523402790377, 72.57207956630248],
+                {}
+            ).addTo(map_923e02a2996bae00ad614feeefdcf787);
+        
+    
+            var div_icon_d3ba41afb92108c664b29e66e28b1036 = L.divIcon({"className": "solar-icon", "html": "\u003cdiv style=\"font-size: 24px;\"\u003e\u2600\ufe0f\u003c/div\u003e"});
+            marker_f8ab4b2b2f0071a0475b737814eac545.setIcon(div_icon_d3ba41afb92108c664b29e66e28b1036);
+        
+    
+            marker_f8ab4b2b2f0071a0475b737814eac545.bindTooltip(
+                `<div>
+                     Potential Solar Farm Location
+                 </div>`,
+                {"sticky": true}
+            );
+        
+    
+            var marker_679f2cfd48ddec253daf725faade0a4d = L.marker(
+                [19.41179419678727, 73.18788785541452],
+                {}
+            ).addTo(map_923e02a2996bae00ad614feeefdcf787);
+        
+    
+            var div_icon_78c44e97dd9a2f8e9703ff0d5edf85ee = L.divIcon({"className": "solar-icon", "html": "\u003cdiv style=\"font-size: 24px;\"\u003e\u2600\ufe0f\u003c/div\u003e"});
+            marker_679f2cfd48ddec253daf725faade0a4d.setIcon(div_icon_78c44e97dd9a2f8e9703ff0d5edf85ee);
+        
+    
+            marker_679f2cfd48ddec253daf725faade0a4d.bindTooltip(
+                `<div>
+                     Potential Solar Farm Location
+                 </div>`,
+                {"sticky": true}
+            );
+        
+    
+            var marker_3b82d197aeb70c055e04d28d3bf348c0 = L.marker(
+                [19.319122986644064, 72.42679286785994],
+                {}
+            ).addTo(map_923e02a2996bae00ad614feeefdcf787);
+        
+    
+            var div_icon_d91713edcb72901287a84de2ca83eedd = L.divIcon({"className": "solar-icon", "html": "\u003cdiv style=\"font-size: 24px;\"\u003e\u2600\ufe0f\u003c/div\u003e"});
+            marker_3b82d197aeb70c055e04d28d3bf348c0.setIcon(div_icon_d91713edcb72901287a84de2ca83eedd);
+        
+    
+            marker_3b82d197aeb70c055e04d28d3bf348c0.bindTooltip(
+                `<div>
+                     Potential Solar Farm Location
+                 </div>`,
+                {"sticky": true}
+            );
+        
+    
+            var marker_f066884d088057c510567d505d89c1ab = L.marker(
+                [19.13429457614315, 72.53953516579377],
+                {}
+            ).addTo(map_923e02a2996bae00ad614feeefdcf787);
+        
+    
+            var div_icon_61c054282e59caaf2902f2430f704891 = L.divIcon({"className": "solar-icon", "html": "\u003cdiv style=\"font-size: 24px;\"\u003e\u2600\ufe0f\u003c/div\u003e"});
+            marker_f066884d088057c510567d505d89c1ab.setIcon(div_icon_61c054282e59caaf2902f2430f704891);
+        
+    
+            marker_f066884d088057c510567d505d89c1ab.bindTooltip(
+                `<div>
+                     Potential Solar Farm Location
+                 </div>`,
+                {"sticky": true}
+            );
+        
+    
+            var marker_5c1165dd3d5c4c437467bb3a1b230eb8 = L.marker(
+                [19.383833142248715, 73.29317488287427],
+                {}
+            ).addTo(map_923e02a2996bae00ad614feeefdcf787);
+        
+    
+            var div_icon_86d96b209fdd1d3a8c9613ab0a64c1df = L.divIcon({"className": "solar-icon", "html": "\u003cdiv style=\"font-size: 24px;\"\u003e\u2600\ufe0f\u003c/div\u003e"});
+            marker_5c1165dd3d5c4c437467bb3a1b230eb8.setIcon(div_icon_86d96b209fdd1d3a8c9613ab0a64c1df);
+        
+    
+            marker_5c1165dd3d5c4c437467bb3a1b230eb8.bindTooltip(
+                `<div>
+                     Potential Solar Farm Location
+                 </div>`,
+                {"sticky": true}
+            );
+        
+    
+            var marker_68ad1dd62d84e40c3ff3e1ac6ac013b0 = L.marker(
+                [19.383571265021967, 73.161806527071],
+                {}
+            ).addTo(map_923e02a2996bae00ad614feeefdcf787);
+        
+    
+            var div_icon_e70c64d6ec10659d0d32dc0ae3ef34ea = L.divIcon({"className": "solar-icon", "html": "\u003cdiv style=\"font-size: 24px;\"\u003e\u2600\ufe0f\u003c/div\u003e"});
+            marker_68ad1dd62d84e40c3ff3e1ac6ac013b0.setIcon(div_icon_e70c64d6ec10659d0d32dc0ae3ef34ea);
+        
+    
+            marker_68ad1dd62d84e40c3ff3e1ac6ac013b0.bindTooltip(
+                `<div>
+                     Potential Solar Farm Location
+                 </div>`,
+                {"sticky": true}
+            );
+        
+    
+            var marker_85599977ac7b69d93d2c97c46ad6d787 = L.marker(
+                [18.756052102363295, 72.63249681817564],
+                {}
+            ).addTo(map_923e02a2996bae00ad614feeefdcf787);
+        
+    
+            var div_icon_cb97863716f59bc3b7e3ee1e4d49ea96 = L.divIcon({"className": "solar-icon", "html": "\u003cdiv style=\"font-size: 24px;\"\u003e\u2600\ufe0f\u003c/div\u003e"});
+            marker_85599977ac7b69d93d2c97c46ad6d787.setIcon(div_icon_cb97863716f59bc3b7e3ee1e4d49ea96);
+        
+    
+            marker_85599977ac7b69d93d2c97c46ad6d787.bindTooltip(
+                `<div>
+                     Potential Solar Farm Location
+                 </div>`,
+                {"sticky": true}
+            );
+        
+    
+            var marker_3bdcba2957132b671d7e3e1fcfafdeae = L.marker(
+                [18.716863106773896, 73.11184997507318],
+                {}
+            ).addTo(map_923e02a2996bae00ad614feeefdcf787);
+        
+    
+            var div_icon_adebba70463b9147ec738b2785f253c6 = L.divIcon({"className": "solar-icon", "html": "\u003cdiv style=\"font-size: 24px;\"\u003e\u2600\ufe0f\u003c/div\u003e"});
+            marker_3bdcba2957132b671d7e3e1fcfafdeae.setIcon(div_icon_adebba70463b9147ec738b2785f253c6);
+        
+    
+            marker_3bdcba2957132b671d7e3e1fcfafdeae.bindTooltip(
+                `<div>
+                     Potential Solar Farm Location
+                 </div>`,
+                {"sticky": true}
+            );
+        
+    
+            var marker_fabddfd8f2d9f4ad48144855d3cd3a17 = L.marker(
+                [19.461470477828907, 72.53045501241975],
+                {}
+            ).addTo(map_923e02a2996bae00ad614feeefdcf787);
+        
+    
+            var div_icon_b99c10a324b2a2a045896a173dbec582 = L.divIcon({"className": "solar-icon", "html": "\u003cdiv style=\"font-size: 24px;\"\u003e\u2600\ufe0f\u003c/div\u003e"});
+            marker_fabddfd8f2d9f4ad48144855d3cd3a17.setIcon(div_icon_b99c10a324b2a2a045896a173dbec582);
+        
+    
+            marker_fabddfd8f2d9f4ad48144855d3cd3a17.bindTooltip(
+                `<div>
+                     Potential Solar Farm Location
+                 </div>`,
+                {"sticky": true}
+            );
+        
+    
+            var marker_2370c4edc7018474e7d55efb8cb11455 = L.marker(
+                [19.344979264850128, 72.72599148597519],
+                {}
+            ).addTo(map_923e02a2996bae00ad614feeefdcf787);
+        
+    
+            var div_icon_d4389b7edc632cc8c44feae23e5eadf7 = L.divIcon({"className": "solar-icon", "html": "\u003cdiv style=\"font-size: 24px;\"\u003e\u2600\ufe0f\u003c/div\u003e"});
+            marker_2370c4edc7018474e7d55efb8cb11455.setIcon(div_icon_d4389b7edc632cc8c44feae23e5eadf7);
+        
+    
+            marker_2370c4edc7018474e7d55efb8cb11455.bindTooltip(
+                `<div>
+                     Potential Solar Farm Location
+                 </div>`,
+                {"sticky": true}
+            );
+        
+    
+            var marker_943abf3641d78070666767995ecd0c70 = L.marker(
+                [19.051341427661743, 73.11936420759324],
+                {}
+            ).addTo(map_923e02a2996bae00ad614feeefdcf787);
+        
+    
+            var div_icon_f3263f7573b91171a6ee7667f708fb7e = L.divIcon({"className": "solar-icon", "html": "\u003cdiv style=\"font-size: 24px;\"\u003e\u2600\ufe0f\u003c/div\u003e"});
+            marker_943abf3641d78070666767995ecd0c70.setIcon(div_icon_f3263f7573b91171a6ee7667f708fb7e);
+        
+    
+            marker_943abf3641d78070666767995ecd0c70.bindTooltip(
+                `<div>
+                     Potential Solar Farm Location
+                 </div>`,
+                {"sticky": true}
+            );
+        
+    
+            var marker_7e9eecce17128d9dc252b034059d7c28 = L.marker(
+                [19.51597963529089, 73.1742945032664],
+                {}
+            ).addTo(map_923e02a2996bae00ad614feeefdcf787);
+        
+    
+            var div_icon_fb49b8b39760547ebfc48eaf9ef87690 = L.divIcon({"className": "solar-icon", "html": "\u003cdiv style=\"font-size: 24px;\"\u003e\u2600\ufe0f\u003c/div\u003e"});
+            marker_7e9eecce17128d9dc252b034059d7c28.setIcon(div_icon_fb49b8b39760547ebfc48eaf9ef87690);
+        
+    
+            marker_7e9eecce17128d9dc252b034059d7c28.bindTooltip(
+                `<div>
+                     Potential Solar Farm Location
+                 </div>`,
+                {"sticky": true}
+            );
+        
+    
+            var marker_a16c8c86c3348041dd60bdf02d104a28 = L.marker(
+                [18.687110941834323, 72.76224967229231],
+                {}
+            ).addTo(map_923e02a2996bae00ad614feeefdcf787);
+        
+    
+            var div_icon_f7b171e23606f301252f6d9fe0eb52da = L.divIcon({"className": "solar-icon", "html": "\u003cdiv style=\"font-size: 24px;\"\u003e\u2600\ufe0f\u003c/div\u003e"});
+            marker_a16c8c86c3348041dd60bdf02d104a28.setIcon(div_icon_f7b171e23606f301252f6d9fe0eb52da);
+        
+    
+            marker_a16c8c86c3348041dd60bdf02d104a28.bindTooltip(
+                `<div>
+                     Potential Solar Farm Location
+                 </div>`,
+                {"sticky": true}
+            );
+        
+    
+            var marker_03f0f76a8d591ad04ee31d574b1bccf6 = L.marker(
+                [18.782954253321936, 72.72665348984486],
+                {}
+            ).addTo(map_923e02a2996bae00ad614feeefdcf787);
+        
+    
+            var div_icon_ec9ba4d42fa799804137d15466b3c9c0 = L.divIcon({"className": "solar-icon", "html": "\u003cdiv style=\"font-size: 24px;\"\u003e\u2600\ufe0f\u003c/div\u003e"});
+            marker_03f0f76a8d591ad04ee31d574b1bccf6.setIcon(div_icon_ec9ba4d42fa799804137d15466b3c9c0);
+        
+    
+            marker_03f0f76a8d591ad04ee31d574b1bccf6.bindTooltip(
+                `<div>
+                     Potential Solar Farm Location
+                 </div>`,
+                {"sticky": true}
+            );
+        
+</script>
+</html>
