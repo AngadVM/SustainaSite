@@ -8,6 +8,8 @@ streamlit = "*"
 osmnx = "*"
 matplotlib = "*"
 scipy = "*"
+scikit-learn = "*"
+joblib = "*"
 
 [dev-packages]
 
