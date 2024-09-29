@@ -3,19 +3,20 @@ from Modules.map import get_map
 from Modules.landuse import get_land_use_map
 from Modules.solar import get_radiation_map
 from Modules.wind import get_wind_map
-from Modules.final_map import create_combined_renewable_energy_map
+from Modules.final_map import create_ml_renewable_energy_map
 import streamlit.components.v1 as components
 
 def main():
 
     st.set_page_config(
         page_title="SustainaSite",
-        page_icon=":chart_with_upwards_trend:",
+        page_icon="data:image/svg+xml;base64,PHN2ZyB4bWxucz0iaHR0cDovL3d3dy53My5vcmcvMjAwMC9zdmciIHdpZHRoPSIyNCIgaGVpZ2h0PSIyNCIgdmlld0JveD0iMCAwIDI0IDI0IiBmaWxsPSJub25lIiBzdHJva2U9IiMyYTlkOGYiIHN0cm9rZS13aWR0aD0iMiIgc3Ryb2tlLWxpbmVjYXA9InJvdW5kIiBzdHJva2UtbGluZWpvaW49InJvdW5kIiBjbGFzcz0ibHVjaWRlIGx1Y2lkZS1sZWFmeS1ncmVlbiI+PHBhdGggZD0iTTIgMjJjMS4yNS0uOTg3IDIuMjctMS45NzUgMy45LTIuMmE1LjU2IDUuNTYgMCAwIDEgMy44IDEuNSA0IDQgMCAwIDAgNi4xODctMi4zNTMgMy41IDMuNSAwIDAgMCAzLjY5LTUuMTE2QTMuNSAzLjUgMCAwIDAgMjAuOTUgOCAzLjUgMy41IDAgMSAwIDE2IDMuMDVhMy41IDMuNSAwIDAgMC01LjgzMSAxLjM3MyAzLjUgMy41IDAgMCAwLTUuMTE2IDMuNjkgNCA0IDAgMCAwLTIuMzQ4IDYuMTU1QzMuNDk5IDE1LjQyIDQuNDA5IDE2LjcxMiA0LjIgMTguMSAzLjkyNiAxOS43NDMgMy4wMTQgMjAuNzMyIDIgMjIiLz48cGF0aCBkPSJNMiAyMiAxNyA3Ii8+PC9zdmc+",
         layout="wide",
-        initial_sidebar_state="expanded",
+        initial_sidebar_state="expanded"
+        
     )
 
-    st.html("<h1>Sustaina<span style='color: #2a9d8f'>Site</span></h1>")
+    st.html("<img src='data:image/svg+xml;base64,PHN2ZyB4bWxucz0iaHR0cDovL3d3dy53My5vcmcvMjAwMC9zdmciIHdpZHRoPSIyNCIgaGVpZ2h0PSIyNCIgdmlld0JveD0iMCAwIDI0IDI0IiBmaWxsPSJub25lIiBzdHJva2U9IiMyYTlkOGYiIHN0cm9rZS13aWR0aD0iMiIgc3Ryb2tlLWxpbmVjYXA9InJvdW5kIiBzdHJva2UtbGluZWpvaW49InJvdW5kIiBjbGFzcz0ibHVjaWRlIGx1Y2lkZS1sZWFmeS1ncmVlbiI+PHBhdGggZD0iTTIgMjJjMS4yNS0uOTg3IDIuMjctMS45NzUgMy45LTIuMmE1LjU2IDUuNTYgMCAwIDEgMy44IDEuNSA0IDQgMCAwIDAgNi4xODctMi4zNTMgMy41IDMuNSAwIDAgMCAzLjY5LTUuMTE2QTMuNSAzLjUgMCAwIDAgMjAuOTUgOCAzLjUgMy41IDAgMSAwIDE2IDMuMDVhMy41IDMuNSAwIDAgMC01LjgzMSAxLjM3MyAzLjUgMy41IDAgMCAwLTUuMTE2IDMuNjkgNCA0IDAgMCAwLTIuMzQ4IDYuMTU1QzMuNDk5IDE1LjQyIDQuNDA5IDE2LjcxMiA0LjIgMTguMSAzLjkyNiAxOS43NDMgMy4wMTQgMjAuNzMyIDIgMjIiLz48cGF0aCBkPSJNMiAyMiAxNyA3Ii8+PC9zdmc+' style='width: 200px'><h1>Sustaina<span style='color: #2a9d8f'>Site</span></h1>")
 
     # Capture the form data
     form_data = det_form()
@@ -50,8 +51,8 @@ def main():
 
         st.markdown("## Identified Locations!")
 
-        create_combined_renewable_energy_map(location, scale)
-        render_html(f"tmp/{location}_combined_renewable_energy_map.html", caption='Potential Locations for {location}')
+        create_ml_renewable_energy_map(location, scale)
+        render_html(f"tmp/{location}_ml_renewable_energy_map.html", caption='Potential Locations for {location}')
 
 def det_form():
 
